@@ -12,6 +12,31 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 </head>
+<style>
+    #map-section {
+        position: relative;
+        width: 100%;
+        height: 400px;
+    }
+
+    @media (max-width: 1024px) {
+        #map-section {
+            height: 300px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        #map-section {
+            height: 250px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        #map-section {
+            height: 200px;
+        }
+    }
+</style>
 
 <body>
     <!-- Navbar -->
@@ -166,6 +191,19 @@
 
         </div>
     </div>
+
+    <section id="map-section" class="relative w-full h-96" style="padding: 0;">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093476!2d144.9537363153156!3d-37.81627917975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f4f3221d%3A0x2e0a17b89f6ddc6a!2sFlinders%20St%20Station!5e0!3m2!1sen!2sau!4v1609471234567!5m2!1sen!2sau"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            style="border:0;"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0">
+        </iframe>
+    </section>
 
 
     <footer class="w-full py-14 bg-slate-200">
