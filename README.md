@@ -1,11 +1,5 @@
-<p align="center"><a href="https://example-agro.com" target="_blank"><img src="https://example.com/agro-logo.png" width="400" alt="Agro E-commerce Logo"></a></p>
+<p align="center"><a href="https://example-agro.com" target="_blank"><img src="https://github.com/sanad-bhowmik/Agro_E-commerce/blob/main/public/img/mockuper.png" width="400" alt="Agro E-commerce Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/example-agro/ecommerce/actions"><img src="https://github.com/example-agro/ecommerce/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/example/agro-ecommerce"><img src="https://img.shields.io/packagist/dt/example/agro-ecommerce" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/example/agro-ecommerce"><img src="https://img.shields.io/packagist/v/example/agro-ecommerce" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/example/agro-ecommerce"><img src="https://img.shields.io/packagist/l/example/agro-ecommerce" alt="License"></a>
-</p>
 
 ## About Agro E-commerce
 
