@@ -20,4 +20,12 @@ class ProductController extends Controller
         $product = Product::find($id); // Retrieve the product by ID
         return view('productDetails', compact('product'));
     }
+    public function index2()
+    {
+        // Fetch all products from the database
+        $products = Product::all();
+
+        // Return the 'product' view with the products data
+        return view('product', compact('products'));
+    }
 }

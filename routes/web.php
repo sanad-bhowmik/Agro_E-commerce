@@ -10,11 +10,13 @@ Route::get('/', [ProductController::class, 'index'])->name('home');
 Route::get('/about', function () {
     return view('about');
 });
-Route::get('/product', function () {
-    return view('product');
-});
+Route::get('/product', [ProductController::class, 'index2'])->name('product.index2');
+
 Route::get('/contact', function () {
     return view('contact');
+});
+Route::get('/price', function () {
+    return view('price');
 });
 Route::get('/productDetails', function () {
     return view('productDetails');

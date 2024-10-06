@@ -49,7 +49,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
-            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="#">Pricing</a></li>
+            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/price">Pricing</a></li>
             <li class="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
@@ -87,7 +87,7 @@
                         <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/product">Product</a>
                     </li>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Pricing</a>
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/price">Pricing</a>
                     </li>
                     <li class="mb-1">
                         <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/contact">Contact</a>
@@ -104,55 +104,94 @@
     <!-- Navbar -->
 
 
-    <div class="container mx-auto p-6">
+    <div class="container mx-auto p-8 bg-gray-100">
         <!-- Main Content Wrapper -->
-        <div class="flex flex-col lg:flex-row gap-6">
-            <!-- Product Cards Section -->
-            <div class="flex-1">
-                <h2 class="text-xl font-bold mb-4">Product List</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    <!-- Card 1 -->
-                    <div class="bg-white shadow-md rounded-md overflow-hidden">
-                        <img src="https://img.freepik.com/free-photo/closeup-shot-green-grass-swaying-field_181624-29123.jpg" alt="Product 1" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold mb-2">Product 1 Name</h3>
-                            <p class="text-gray-500">Price: $20</p>
+        <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center gap-y-16 gap-x-10 mt-10 mb-20">
+            @foreach($products as $product)
+            <div class="w-80 bg-white shadow-lg duration-500 hover:scale-105 hover:shadow-2xl transform transition-all rounded-xl overflow-hidden">
+                <a href="{{ route('product.details', $product->id) }}" class="block">
+                    <!-- Image Section -->
+                    <div class="relative h-80 w-full">
+                        <img src="{{ asset('img/product/' . $product->image) }}" alt="{{ $product->name }}" class="h-full w-full object-cover rounded-t-xl transition-transform duration-300 transform hover:scale-110">
+                        <div class="absolute top-3 right-3 bg-gradient-to-r from-blue-400 to-green-500 text-white px-2 py-1 rounded-full shadow-lg">
+                            <span class="text-xs font-bold">{{ $product->rating }}★</span>
                         </div>
                     </div>
-                    <!-- Card 2 -->
-                    <div class="bg-white shadow-md rounded-md overflow-hidden">
-                        <img src="https://img.freepik.com/free-vector/php-web-development-banner_78532-105.jpg" alt="Product 2" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold mb-2">Product 2 Name</h3>
-                            <p class="text-gray-500">Price: $30</p>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="bg-white shadow-md rounded-md overflow-hidden">
-                        <img src="https://img.freepik.com/free-photo/wheat-field_1253-618.jpg" alt="Product 3" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold mb-2">Product 3 Name</h3>
-                            <p class="text-gray-500">Price: $25</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Sidebar Section -->
-            <aside class="w-full lg:w-1/3 bg-gray-50 p-4 rounded-md shadow-md">
+                    <!-- Content Section -->
+                    <div class="p-5 bg-gradient-to-b from-white to-gray-50 rounded-b-xl shadow-lg">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-indigo-500 font-semibold uppercase text-sm tracking-wider">{{ $product->brand }}</span>
+                            <span class="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow">{{ $product->price }} BDT</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 truncate capitalize">{{ $product->name }}</h3>
+                        <p class="text-gray-600 mt-3 text-sm leading-tight">{{ Str::limit($product->details, 80, '...') }}</p>
+
+                    </div>
+                </a>
+            </div>
+            @endforeach
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+
+        if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+                burger[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+
+        if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+
+        if (backdrop.length) {
+            for (var i = 0; i < backdrop.length; i++) {
+                backdrop[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    });
+</script>
+<!-- <aside class="w-full lg:w-1/3 bg-gray-50 p-4 rounded-md shadow-md">
                 <h3 class="text-lg font-bold mb-4 border-b-2 border-orange-600">Product Categories</h3>
                 <div class="p-4 bg-white shadow-md rounded-md">
-                    <!-- Search Bar -->
                     <div class="mb-4">
                         <input type="text" placeholder="Search products..." class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-200">
                     </div>
 
-                    <!-- Section Header -->
                     <h3 class="text-xl font-semibold mb-2 relative">
                         <span class="pb-1 border-b-2 border-red-600">পণ্য তালিকা</span>
                     </h3>
 
-                    <!-- Category List -->
                     <ul class="text-gray-700">
                         <li class="mb-1 flex items-center hover:text-red-600 transition-colors">
                             <svg class="w-3 h-3 text-red-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -240,53 +279,4 @@
                 </div>
 
 
-            </aside>
-        </div>
-    </div>
-
-</body>
-
-</html>
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // open
-        const burger = document.querySelectorAll('.navbar-burger');
-        const menu = document.querySelectorAll('.navbar-menu');
-
-        if (burger.length && menu.length) {
-            for (var i = 0; i < burger.length; i++) {
-                burger[i].addEventListener('click', function() {
-                    for (var j = 0; j < menu.length; j++) {
-                        menu[j].classList.toggle('hidden');
-                    }
-                });
-            }
-        }
-
-        // close
-        const close = document.querySelectorAll('.navbar-close');
-        const backdrop = document.querySelectorAll('.navbar-backdrop');
-
-        if (close.length) {
-            for (var i = 0; i < close.length; i++) {
-                close[i].addEventListener('click', function() {
-                    for (var j = 0; j < menu.length; j++) {
-                        menu[j].classList.toggle('hidden');
-                    }
-                });
-            }
-        }
-
-        if (backdrop.length) {
-            for (var i = 0; i < backdrop.length; i++) {
-                backdrop[i].addEventListener('click', function() {
-                    for (var j = 0; j < menu.length; j++) {
-                        menu[j].classList.toggle('hidden');
-                    }
-                });
-            }
-        }
-    });
-</script>
+            </aside> -->
