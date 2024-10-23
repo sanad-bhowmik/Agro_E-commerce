@@ -22,3 +22,5 @@ Route::get('/productDetails', function () {
     return view('productDetails');
 });
 Route::get('/productDetails/{id}', [ProductController::class, 'show'])->name('product.details');
+
+Route::get('/admin', [ProductController::class, 'admin'])->name('admin');
