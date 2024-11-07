@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- @vite('resources/css/app.css') -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>AgroSolveBD</title>
+    <title>Eventas Crop care</title>
     <link rel="icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20230212/ourmid/pngtree-organic-fair-and-agro-garden-logo-design-png-image_6593571.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 </head>
 <style>
@@ -126,6 +127,9 @@
             </li>
             <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/contact">Contact</a></li>
         </ul>
+        <ul class="hidden lg:flex space-x-6 items-center">
+        <li><a class="text-sm text-blue-600 font-bold uppercase hover:underline" href="/login"><i class="fas fa-sign-in-alt"></i></a></li>
+    </ul>
     </nav>
 
 
