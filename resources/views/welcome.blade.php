@@ -80,7 +80,7 @@
 
 <body>
     <div class="">
-        <button id="scrollUpBtn" class="fixed bottom-5 right-5 bg-green-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition-opacity duration-300 z-50" style="opacity: 0.8;" onclick="scrollToTop()">â†‘</button>
+        <button id="scrollUpBtn" class="fixed bottom-5 right-5 bg-green-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition-opacity duration-300 z-50" style="opacity: 0.8;" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
     </div>
 
 
@@ -107,12 +107,23 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
-            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/about">About Us</a></li>
+            <li class="relative">
+                <a class="text-sm text-gray-400 hover:text-gray-500" href="/about" id="about-link">About Us</a>
+                <!-- Dropdown Arrow SVG -->
             <li class="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
+
+            <!-- Submenu -->
+            <ul id="submenu" class="absolute left-0 mt-2 space-y-2 p-3 hidden" style="margin-top: 29%;margin-left: 21%;width: 27%;border-radius: 6px;background: rgba(255, 255, 255, 0.7);border-radius: 16px;box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);border: 1px solid rgba(255, 255, 255, 0.3);">
+                <li><a href="/mission" class="block text-sm hover:text-white hover:bg-black" style="height: 17%;font-size: 15px;font-family: monospace;width: 119%;margin-left: -10px;padding: 10px;text-align: center;">Mission</a></li>
+                <li><a href="/vision" class="block text-sm hover:text-white hover:bg-black" style="height: 17%;font-size: 15px;font-family: monospace;width: 119%;margin-left: -10px;padding: 10px;text-align: center;">Vision</a></li>
+            </ul>
+            </li>
+
+
             <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/product">Products</a></li>
             <li class="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
@@ -128,8 +139,8 @@
             <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/contact">Contact</a></li>
         </ul>
         <ul class="hidden lg:flex space-x-6 items-center">
-        <li><a class="text-sm text-blue-600 font-bold uppercase hover:underline" href="/login"><i class="fas fa-sign-in-alt"></i></a></li>
-    </ul>
+            <li><a class="text-sm text-blue-600 font-bold uppercase hover:underline" href="/login"><i class="fas fa-sign-in-alt"></i></a></li>
+        </ul>
     </nav>
 
 
@@ -236,19 +247,47 @@
     </div>
 
     <!-- âœ… Grid Section - Starts Here ðŸ‘‡ -->
-    <section id="Projects" class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5 mb-24">
+    <section id="Projects" class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-10 mb-5 px-4">
         @foreach($products->take(6) as $product) <!-- Showing only the first 6 products -->
-        <div class="w-72 bg-white shadow-md duration-500 hover:scale-105 hover:shadow-xl" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+        <div class="w-full sm:w-64 md:w-72 lg:w-80 bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg hover:translate-y-[-5px]">
             <a href="{{ route('product.details', $product->id) }}">
-                <img src="{{ asset('img/product/' . $product->image) }}" alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
-                <div class="px-4 py-3 w-72">
-                    <span class="text-gray-400 mr-3 uppercase text-xs">{{ $product->brand }}</span>
-                    <p class="text-lg font-bold text-black truncate block capitalize">{{ $product->name }}</p>
+                <!-- Product Image -->
+                <img src="{{ asset('img/product/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-48 object-cover object-center" />
+
+                <div class="p-4">
+                    <!-- Status Tag -->
+                    <div class="flex items-baseline">
+                        <span class="inline-block bg-red-200 text-teal-800 py-1 px-4 text-xs rounded-full uppercase font-semibold tracking-wide">
+                            New
+                        </span>
+                        <div class="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">
+                            {{ $product->brand }}
+                        </div>
+                    </div>
+
+                    <!-- Product Name -->
+                    <h4 class="mt-2 font-semibold text-base leading-tight truncate">{{ $product->name }}</h4>
+
+                    <!-- Price in Taka -->
+                    <div class="mt-1">
+                        <span class="text-lg font-bold text-gray-800">{{ number_format($product->price, 2) }}৳</span>
+                        <span class="text-gray-600 text-sm">/ each</span>
+                    </div>
                 </div>
             </a>
         </div>
         @endforeach
     </section>
+
+
+    <style>
+        @media (min-width: 1280px) {
+            #Projects {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 36px;
+            }
+        }
+    </style>
 
     <!-- âœ… Grid Section - Ends Here ðŸ‘† -->
 
@@ -1137,4 +1176,26 @@
             behavior: 'smooth' // Smooth scrolling
         });
     }
+    const aboutLink = document.getElementById('about-link');
+    const submenu = document.getElementById('submenu');
+
+    aboutLink.addEventListener('mouseover', () => {
+        submenu.classList.remove('hidden');
+    });
+
+    aboutLink.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            if (!submenu.matches(':hover')) {
+                submenu.classList.add('hidden');
+            }
+        }, 100);
+    });
+
+    submenu.addEventListener('mouseover', () => {
+        submenu.classList.remove('hidden');
+    });
+
+    submenu.addEventListener('mouseleave', () => {
+        submenu.classList.add('hidden');
+    });
 </script>

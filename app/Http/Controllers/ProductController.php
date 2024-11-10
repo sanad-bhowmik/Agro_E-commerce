@@ -9,10 +9,12 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
+        // Retrieve products where status is 1 (Active)
+        $products = Product::where('status', 1)->get();
 
         return view('welcome', compact('products'));
     }
+
     public function show($id)
     {
         $product = Product::find($id);
@@ -71,6 +73,16 @@ class ProductController extends Controller
 
     public function AllProducts()
     {
-        return view('AllProducts');
+        $products = Product::paginate(10); // Fetch 10 products per page
+        return view('AllProducts', compact('products'));
+    }
+
+    public function updateStatus(Request $request, $id)
+    {
+        $product = Product::find($id);
+        $product->status = $request->status;
+        $product->save();
+
+        return response()->json(['success' => true]);
     }
 }

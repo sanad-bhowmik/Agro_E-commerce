@@ -18,6 +18,7 @@ class Product extends Model
         'rating',
         'brand',
         'image',
+        'status',
         'created_at',
         'updated_at',
     ];

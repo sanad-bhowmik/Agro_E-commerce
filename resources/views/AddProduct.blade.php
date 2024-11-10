@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <title>Eventas | Product</title>
+    <title>Add Product | Evintas</title>
+    <link rel="icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20230212/ourmid/pngtree-organic-fair-and-agro-garden-logo-design-png-image_6593571.png">
 
 </head>
 <style>
@@ -102,9 +103,26 @@
                 <!-- logo -->
                 <a href="#" class="text-white flex items-center space-x-2 group hover:text-white">
                     <div>
-                        <img src="/img/logo.png" alt="logo" style="margin-left: 34%;height: 10%;width: 22%;">
+                        <svg height="44px" width="44px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 504.125 504.125" xml:space="preserve" fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path style="fill:#3A7F0D;" d="M339.772,0c0,0,44.536,108.954-146.337,182.138C89.719,221.893,10.059,323.789,105.173,481.193 c7.877-70.357,41.653-225.485,186.888-260.884c0,0-135.176,50.546-147.117,279.347c69.459,9.752,232.361,16.305,280.726-125.062 C489.536,187.817,339.772,0,339.772,0z"></path>
+                                <path style="fill:#49A010;" d="M145.007,498.704c147.456-58.849,254.748-196.71,269.556-361.283C384.418,56.107,339.772,0,339.772,0 s44.536,108.954-146.337,182.138C89.719,221.893,10.059,323.789,105.173,481.193c7.877-70.357,41.653-225.485,186.888-260.884 C292.053,220.31,157.279,270.73,145.007,498.704z"></path>
+                                <circle style="fill:#3A7F0D;" cx="90.459" cy="171.985" r="13.785"></circle>
+                                <g>
+                                    <circle style="fill:#49A010;" cx="133.782" cy="158.2" r="9.846"></circle>
+                                    <circle style="fill:#49A010;" cx="124.921" cy="64.662" r="24.615"></circle>
+                                    <circle style="fill:#49A010;" cx="200.736" cy="120.785" r="7.877"></circle>
+                                    <circle style="fill:#49A010;" cx="266.713" cy="76.477" r="22.646"></circle>
+                                </g>
+                            </g>
+                        </svg>
                     </div>
 
+                    <div>
+                        <span class="text-2xl font-extrabold">Evintas</span>
+                    </div>
                 </a>
             </header>
 
@@ -115,7 +133,7 @@
 
                     <!-- ITEM -->
                     <li class="text-sm text-gray-500">
-                        <a href="#"
+                        <a href="/dashboard"
                             class="flex items-center w-full py-1 px-2 rounded relative hover:text-white hover:bg-gray-700">
                             <div class="pr-2">
                                 <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -216,16 +234,25 @@
 
                                 <a href="#" class="text-white flex items-center space-x-2 group">
                                     <div>
-                                        <svg class="h-8 w-8 transition-transform duration-300 group-hover:-rotate-45 "
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        <svg height="44px" width="44px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 504.125 504.125" xml:space="preserve" fill="#000000">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <path style="fill:#3A7F0D;" d="M339.772,0c0,0,44.536,108.954-146.337,182.138C89.719,221.893,10.059,323.789,105.173,481.193 c7.877-70.357,41.653-225.485,186.888-260.884c0,0-135.176,50.546-147.117,279.347c69.459,9.752,232.361,16.305,280.726-125.062 C489.536,187.817,339.772,0,339.772,0z"></path>
+                                                <path style="fill:#49A010;" d="M145.007,498.704c147.456-58.849,254.748-196.71,269.556-361.283C384.418,56.107,339.772,0,339.772,0 s44.536,108.954-146.337,182.138C89.719,221.893,10.059,323.789,105.173,481.193c7.877-70.357,41.653-225.485,186.888-260.884 C292.053,220.31,157.279,270.73,145.007,498.704z"></path>
+                                                <circle style="fill:#3A7F0D;" cx="90.459" cy="171.985" r="13.785"></circle>
+                                                <g>
+                                                    <circle style="fill:#49A010;" cx="133.782" cy="158.2" r="9.846"></circle>
+                                                    <circle style="fill:#49A010;" cx="124.921" cy="64.662" r="24.615"></circle>
+                                                    <circle style="fill:#49A010;" cx="200.736" cy="120.785" r="7.877"></circle>
+                                                    <circle style="fill:#49A010;" cx="266.713" cy="76.477" r="22.646"></circle>
+                                                </g>
+                                            </g>
                                         </svg>
                                     </div>
 
                                     <div>
-                                        <span class="text-2xl font-extrabold">FARNOUS</span>
-                                        <span class="text-xs block">Project Managment</span>
+                                        <span class="text-2xl font-extrabold">Evintas</span>
                                     </div>
                                 </a>
                             </div>
@@ -245,11 +272,11 @@
                         <div class="hidden md:flex items-stretch">
                             <!-- Profile Menu DT -->
                             <div class="ml-4 flex md:ml-6 ">
-                                <a href="/">
-                                    <div class="relative flex justify-center items-center mr-4 mt-4">
+                                <div class="relative flex justify-center items-center mr-4">
+                                    <a href="/">
                                         <div class="bg-gray-700 block hover:text-white p-1 rounded-full text-gray-400">
                                             <span class="sr-only">View notifications</span>
-                                            <svg fill="#9ca3af" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.00 512.00" xml:space="preserve">
+                                            <svg fill="#9ca3af" class="h-6 w-6" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
                                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                                 <g id="SVGRepo_iconCarrier">
@@ -261,14 +288,13 @@
                                                 </g>
                                             </svg>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
+
 
                                 <!-- Profile dropdown -->
-                                <div class="relative bg-gray-700 px-4 text-gray-400 hover:text-white text-sm cursor-pointer"
-                                    x-data="{open: false}">
+                                <div class="relative bg-gray-700 px-4 text-gray-400 hover:text-white text-sm cursor-pointer" x-data="{ open: false }">
                                     <div class="flex items-center min-h-full" @click="open = !open">
-
                                         <div class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                                             id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                                             <span class="sr-only">Open user menu</span>
@@ -276,12 +302,17 @@
                                                 src="https://cdn3d.iconscout.com/3d/premium/thumb/man-avatar-3d-icon-download-in-png-blend-fbx-gltf-file-formats--men-people-male-pack-avatars-icons-5187871.png?f=webp"
                                                 alt="">
                                         </div>
-
                                         <div class="flex flex-col ml-4">
                                             <span>Super Admin</span>
                                         </div>
                                     </div>
 
+                                    <!-- Dropdown content for logout -->
+                                    <div x-show="open" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20">
+                                        <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">
+                                            Logout
+                                        </a>
+                                    </div>
                                 </div>
 
                             </div>
