@@ -210,14 +210,13 @@
     </section>
 
 
-    <section class="bg-white dark:bg-gray-900"style="background-image: url('https://i.ibb.co/0n6DSS3/bgimg.png');">
+    <section class="bg-white dark:bg-gray-900" style="background-image: url('https://i.ibb.co/0n6DSS3/bgimg.png');">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
             <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
-                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Designed for business
-                    teams like yours</h2>
-                <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Here at Landwind we focus on markets
-                    where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Tailored Solutions for Agro Pricing</h2>
+                <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">At Landwind, we specialize in providing accurate and dynamic pricing solutions for the agricultural sector, leveraging technology and innovation to ensure fair, competitive pricing that supports growth and sustainability for businesses in farming, production, and distribution.</p>
             </div>
+
             <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
 
                 <div

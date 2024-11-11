@@ -3,13 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <title>Dashboard | Evintas</title>
+    <title>Add Product | Evintas</title>
     <link rel="icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20230212/ourmid/pngtree-organic-fair-and-agro-garden-logo-design-png-image_6593571.png">
+
 </head>
 <style>
+    .custom-toast {
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        /* From https://css.glass */
+        background: rgba(0, 249, 71, 0.4);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.2px);
+        -webkit-backdrop-filter: blur(6.2px);
+        color: #fff;
+        padding: 16px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 1000;
+    }
+
+    .custom-toast.show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     .scroller {
         scrollbar-color: #a0aec0 #141b2a;
         scrollbar-width: none !important;
@@ -454,96 +485,75 @@
 
 
 
+
             <main class="bg-[#f3f3f9] mb-auto flex-grow">
                 <div class="border-b bg-white border-gray-300 pl-6 py-2 shadow-sm  text-xl font-bold">
-                    Admin Dashboard
+                    Mission
                     <span class="block text-xs font-normal text-gray-300 mt-2">
                         <a href="#">Home</a> &raquo;
-                        <a href="#">Projects</a> &raquo;
-                        <a href="#">Active</a> &raquo;
-                        <a href="#">Test</a>
+                        <a href="#">Front</a> &raquo;
+                        <a href="#">Mission</a> &raquo;
                     </span>
                 </div>
-                <div class="bg-gray-100 min-h-screen flex flex-col p-6">
-                    <!-- Dashboard Widgets (Grid Layout) -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Total Users Widget -->
-                        <div class="bg-gradient-to-t from-red-700 via-rose-600 to-pink-500 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105">
-                            <h3 class="text-xl font-semibold text-white">Total Users</h3>
-                            <p class="text-3xl font-bold text-white">1,500</p>
-                            <div class="mt-3">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
-                                </svg>
-                            </div>
+                <div class="bg-gray-100 min-h-screen flex justify-center items-center p-6">
+                    <div class="bg-white p-8 rounded-lg shadow-md" style="width: 98%;">
+                        <!-- Product Upload Form -->
+                        <!-- Hero Section Title -->
+                        <div class="mb-6">
+                            <h2 class="text-3xl font-bold text-center text-gray-800">Hero Section</h2>
                         </div>
 
-                        <!-- New Registrations Widget -->
-                        <div class="bg-gradient-to-tr from-green-400 via-emerald-500 to-green-700 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105">
-                            <h3 class="text-xl font-semibold text-white">New Registrations</h3>
-                            <p class="text-3xl font-bold text-white">75 this week</p>
-                            <div class="mt-3">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </div>
-                        </div>
+                        <form action="{{ route('storePricing') }}" id="priceCardForm" method="POST" enctype="multipart/form-data">
+                            @csrf
 
-                        <!-- Active Sessions Widget -->
-                        <div class="bg-purple-600 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105">
-                            <h3 class="text-xl font-semibold text-white">Active Sessions</h3>
-                            <p class="text-3xl font-bold text-white">320 currently online</p>
-                            <div class="mt-3">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h6l6 14h6"></path>
-                                </svg>
+                            <!-- Price Card Addition -->
+                            <div class="space-y-6">
+                                @for($i = 1; $i <= 3; $i++)
+                                    <div class="shadow-lg p-6 rounded-lg bg-white border border-gray-300 hover:shadow-2xl transition duration-300">
+                                    <span class="text-lg font-semibold text-gray-800">Add Price Card {{ $i }}</span>
+
+                                    <!-- Card Title and Price -->
+                                    <div class="flex gap-4 mt-4">
+                                        <input type="text" name="cardTitle{{ $i }}" class="w-1/2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter Card {{ $i }} Title" />
+                                        <input type="number" step="0.01" name="cardPrice{{ $i }}" class="w-1/2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter Card {{ $i }} Price ($)" />
+                                    </div>
+
+                                    <!-- Features Input as Tags -->
+                                    <div class="mt-4">
+                                        <label class="font-semibold text-gray-700">Features for Card {{ $i }}:</label>
+                                        <div class="border border-gray-300 rounded-md p-2" id="featureContainer{{ $i }}">
+                                            <input type="text" id="featureInput{{ $i }}" class="w-full p-2 focus:outline-none" placeholder="Type feature and press Enter" onkeydown="addFeature(event, {{ $i }})" />
+                                            <input type="hidden" name="cardFeatures{{ $i }}" id="hiddenFeatures{{ $i }}" />
+                                            <div id="featureTags{{ $i }}" class="flex flex-wrap gap-2 mt-2"></div>
+                                        </div>
+                                    </div>
                             </div>
-                        </div>
+                            @endfor
                     </div>
 
-                    <!-- More Widgets Section -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                        <!-- Revenue Widget -->
-                        <div class="bg-yellow-500 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105">
-                            <h3 class="text-xl font-semibold text-white">Revenue</h3>
-                            <p class="text-3xl font-bold text-white">$10,000</p>
-                            <div class="mt-3">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v6m-3-3h6"></path>
-                                </svg>
-                            </div>
-                        </div>
+                    <!-- Submit Button -->
+                    <div class="flex justify-center mt-8">
+                        <button type="submit" class="bg-blue-500 text-white px-8 py-3 rounded-lg shadow-md hover:bg-blue-600 transition">Save Price Cards</button>
+                    </div>
+                    </form>
 
-                        <!-- Orders Widget -->
-                        <div class="bg-gradient-to-r from-purple-500 to-purple-900 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105">
-                            <h3 class="text-xl font-semibold text-white">Orders</h3>
-                            <p class="text-3xl font-bold text-white">120 Orders</p>
-                            <div class="mt-3">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v6m-3-3h6"></path>
-                                </svg>
-                            </div>
-                        </div>
-
-                        <!-- System Health Widget -->
-                        <div class="bg-gradient-to-r from-red-500 to-red-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105">
-                            <h3 class="text-xl font-semibold text-white">System Health</h3>
-                            <p class="text-xl font-semibold text-green-300">All systems operational</p>
-                            <div class="mt-3">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </div>
-                        </div>
+                    <div id="toast" class="custom-toast">
+                        Your custom toast message goes here!
                     </div>
                 </div>
 
-
-            </main>
-            <footer class="border-t p-4 pb-3 text-xs bg-gray-100">
-                2024 © Design & Develop by PlayOn24.
-            </footer>
         </div>
+        <!-- Custom Toast Notification HTML -->
+        @if(session('success'))
+        <div id="custom-toast" class="custom-toast">
+            <p>{{ session('success') }}</p>
+        </div>
+        @endif
+        </main>
+        <footer class="border-t p-4 pb-3 text-xs bg-gray-100">
+            2024 © Design & Develop by PlayOn24.
+        </footer>
+    </div>
 
     </div>
 
@@ -551,3 +561,109 @@
 </body>
 
 </html>
+<script>
+    function addFeature(event, cardIndex) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            const input = document.getElementById(`featureInput${cardIndex}`);
+            const tagContainer = document.getElementById(`featureTags${cardIndex}`);
+            const hiddenInput = document.getElementById(`hiddenFeatures${cardIndex}`);
+
+            const featureText = input.value.trim();
+            if (featureText) {
+                // Create tag element
+                const tag = document.createElement('span');
+                tag.className = 'bg-blue-500 text-white px-2 py-1 rounded-full flex items-center';
+                tag.innerHTML = `${featureText} <button type="button" onclick="removeFeature(this, ${cardIndex}, '${featureText}')" class="ml-1">×</button>`;
+
+                // Add tag to the container
+                tagContainer.appendChild(tag);
+
+                // Add feature to hidden input
+                const currentFeatures = hiddenInput.value ? hiddenInput.value.split(',') : [];
+                currentFeatures.push(featureText);
+                hiddenInput.value = currentFeatures.join(',');
+
+                // Clear the input field
+                input.value = '';
+            }
+        }
+    }
+
+    function removeFeature(button, cardIndex, featureText) {
+        const tagContainer = document.getElementById(`featureTags${cardIndex}`);
+        const hiddenInput = document.getElementById(`hiddenFeatures${cardIndex}`);
+
+        // Remove the tag element
+        button.parentElement.remove();
+
+        // Remove feature from hidden input
+        const currentFeatures = hiddenInput.value.split(',');
+        const updatedFeatures = currentFeatures.filter(feature => feature !== featureText);
+        hiddenInput.value = updatedFeatures.join(',');
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var toast = document.getElementById("custom-toast");
+
+        // Show the toast if it exists (meaning session has 'success' message)
+        if (toast) {
+            // Add the show class to display the toast with animation
+            toast.classList.add("show");
+
+            // Set timeout to hide the toast after 5 seconds
+            setTimeout(function() {
+                toast.classList.remove("show");
+            }, 3000); // 5000 ms = 5 seconds
+        }
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('missionForm');
+
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            toast.textContent = message;
+            toast.classList.add("show");
+
+            setTimeout(function() {
+                toast.classList.remove("show");
+            }, 3000);
+        }
+        const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRF-TOKEN': csrfToken,
+                    },
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then(errorData => {
+                            console.error('Error Details:', errorData);
+                            showToast('Form submission failed. Check the console for details.');
+                            throw new Error('Form submission failed');
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Form submitted successfully:', data);
+                    showToast('Mission details saved successfully!');
+                    setTimeout(function() {
+                        location.reload();
+                    }, 2000);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showToast('An error occurred. Check the console for details.');
+                });
+        });
+    });
+</script>

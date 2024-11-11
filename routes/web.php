@@ -65,4 +65,6 @@ Route::post('/AddProduct', [ProductController::class, 'storeProduct'])->name('pr
 Route::get('/AllProducts', [ProductController::class, 'AllProducts']);
 Route::post('/update-product-status/{id}', [ProductController::class, 'updateStatus']);
 
+Route::get('/addPricing', [DashboardController::class, 'addPricing'])->name('addPricing');
+Route::post('/storePricing', [DashboardController::class, 'storePricing'])->name('storePricing');
 // <<<<<<<<<<<<<<<<<<<<<    Dashboard    >>>>>>>>>>>>>>>>>>>>>>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Price;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -58,5 +59,41 @@ class DashboardController extends Controller
 
         // Redirect back with a success message
         return response()->json(['message' => 'Mission details saved successfully!']);
+    }
+
+    public function addPricing()
+    {
+
+        return view('addPricing');
+    }
+
+    public function storePricing(Request $request)
+    {
+        // dd($request->all());
+        $validatedData = $request->validate([
+            'cardTitle1' => 'nullable|string|max:255',
+            'cardPrice1' => 'nullable|numeric',
+            'cardFeatures1' => 'nullable|array',
+            'cardTitle2' => 'nullable|string|max:255',
+            'cardPrice2' => 'nullable|numeric',
+            'cardFeatures2' => 'nullable|array',
+            'cardTitle3' => 'nullable|string|max:255',
+            'cardPrice3' => 'nullable|numeric',
+            'cardFeatures3' => 'nullable|array',
+        ]);
+
+        Price::create([
+            'cardOneTitle' => $validatedData['cardTitle1'] ?? '',
+            'cardOnePrice' => $validatedData['cardPrice1'] ?? 0,
+            'cardOneFeature' => json_encode($validatedData['cardFeatures1'] ?? []),  // Default to an empty array if null
+            'cardTwoTitle' => $validatedData['cardTitle2'] ?? '',
+            'cardTwoPrice' => $validatedData['cardPrice2'] ?? 0,
+            'cardTwoFeature' => json_encode($validatedData['cardFeatures2'] ?? []),  // Default to an empty array if null
+            'cardThreeTitle' => $validatedData['cardTitle3'] ?? '',
+            'cardThreePrice' => $validatedData['cardPrice3'] ?? 0,
+            'cardThreeFeature' => json_encode($validatedData['cardFeatures3'] ?? []),  // Default to an empty array if null
+        ]);
+
+        return redirect()->route('addPricing')->with('success', 'Pricing cards saved successfully!');
     }
 }
