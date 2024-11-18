@@ -15,4 +15,5 @@ class FrontendController extends Controller
         // Pass the single mission to the view
         return view('frontMission', compact('mission'));
     }
-}
+
+

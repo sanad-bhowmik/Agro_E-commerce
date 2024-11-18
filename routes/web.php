@@ -2,13 +2,13 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductController;
+use App\Models\Contact;
 use App\Models\Mission;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 Route::get('/', [ProductController::class, 'index'])->name('home');
 
 
@@ -30,8 +30,10 @@ Route::get('/product', [ProductController::class, 'index2'])->name('product.inde
 
 
 Route::get('/contact', function () {
-    return view('contact');
+    $contact = Contact::latest()->first(); 
+    return view('contact', compact('contact'));
 });
+
 
 
 Route::get('/price', function () {
@@ -67,4 +69,14 @@ Route::post('/update-product-status/{id}', [ProductController::class, 'updateSta
 
 Route::get('/addPricing', [DashboardController::class, 'addPricing'])->name('addPricing');
 Route::post('/storePricing', [DashboardController::class, 'storePricing'])->name('storePricing');
+
+
+Route::get('/frontBanner', [DashboardController::class, 'frontBanner'])->name('frontBanner');
+Route::post('/frontBanner/store', [DashboardController::class, 'storeBanner'])->name('banner.store');
+
+
+Route::post('/front-about', [DashboardController::class, 'saveFrontAbout'])->name('frontAbout.save');
+
+Route::get('/frontContact', [DashboardController::class, 'frontContact'])->name('frontContact');
+Route::post('/frontContact', [DashboardController::class, 'updateContact'])->name('updateContact');
 // <<<<<<<<<<<<<<<<<<<<<    Dashboard    >>>>>>>>>>>>>>>>>>>>>>

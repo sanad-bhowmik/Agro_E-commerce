@@ -101,7 +101,7 @@
             </button>
         </div>
         <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-            <li><a class="text-sm text-blue-600 font-bold hover:text-gray-500" href="#">Home</a></li>
+            <li><a class="text-sm text-blue-600 font-bold hover:text-gray-500" href="/">Home</a></li>
             <li class="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
@@ -119,7 +119,6 @@
             <!-- Submenu -->
             <ul id="submenu" class="absolute left-0 mt-2 space-y-2 p-3 hidden" style="margin-top: 29%;margin-left: 21%;width: 27%;border-radius: 6px;background: rgba(255, 255, 255, 0.7);border-radius: 16px;box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);border: 1px solid rgba(255, 255, 255, 0.3);">
                 <li><a href="/mission" class="block text-sm hover:text-white hover:bg-black" style="height: 17%;font-size: 15px;font-family: monospace;width: 119%;margin-left: -10px;padding: 10px;text-align: center;">Mission</a></li>
-                <li><a href="/vision" class="block text-sm hover:text-white hover:bg-black" style="height: 17%;font-size: 15px;font-family: monospace;width: 119%;margin-left: -10px;padding: 10px;text-align: center;">Vision</a></li>
             </ul>
             </li>
 
@@ -162,7 +161,7 @@
             <div>
                 <ul>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/">Home</a>
                     </li>
                     <li class="mb-1">
                         <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/about">About Us</a>
@@ -180,7 +179,7 @@
             </div>
             <div class="mt-auto">
                 <p class="my-4 text-xs text-center text-gray-400">
-                    <span>Copyright Â© 2024</span>
+                    <span>Copyright © 2024</span>
                 </p>
             </div>
         </nav>
@@ -191,20 +190,32 @@
         <!-- Video Container -->
         <div class="absolute inset-0 h-full w-full overflow-hidden z-0">
             <!-- Videos -->
+            @if($banner)
+            @if($banner->firstVideo)
             <video class="hero-video absolute top-0 left-0 h-full w-full object-cover opacity-0" autoplay muted loop>
-                <source src="/vid/vid2.mp4" type="video/mp4">
+                <source src="{{ asset('vid/' . $banner->firstVideo) }}" type="video/mp4">
             </video>
+            @endif
+            @if($banner->secondVideo)
             <video class="hero-video absolute top-0 left-0 h-full w-full object-cover opacity-0" autoplay muted loop>
-                <source src="/vid/vid3.mp4" type="video/mp4">
+                <source src="{{ asset('vid/' . $banner->secondVideo) }}" type="video/mp4">
             </video>
+            @endif
+            @if($banner->thirdVideo)
             <video class="hero-video absolute top-0 left-0 h-full w-full object-cover opacity-0" autoplay muted loop>
-                <source src="/vid/vid1.mp4" type="video/mp4">
+                <source src="{{ asset('vid/' . $banner->thirdVideo) }}" type="video/mp4">
             </video>
+            @endif
+            @endif
         </div>
 
         <!-- Text Content -->
         <div class="relative z-10 text-left ml-6 md:ml-10 lg:ml-20 p-5 md:p-8 lg:p-12 bg-opacity-25 rounded-xl backdrop-blur-sm" style="background: rgb(0 0 0 / 62%);border: 1px solid rgba(0, 0, 0, 0.3);">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Plant Tour: The <br> Journey from molecule to field</h1>
+            @if($banner)
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">{{ $banner->title }}</h1>
+            @else
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Default Hero Title</h1>
+            @endif
             <a href="/about" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg text-lg md:text-xl">Learn More</a>
         </div>
     </section>
@@ -214,31 +225,38 @@
     <section class="mb-10">
         <div class="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
             <div class="w-full h-64 lg:w-1/2 lg:h-auto">
+                <!-- Display video dynamically from the frontAbout table -->
+                @if($frontAbout && $frontAbout->video)
                 <video class="h-full w-full object-cover" autoplay loop muted>
-                    <source src="/vid/vid4.mp4" type="video/mp4">
+                    <source src="{{ asset('vid/' . $frontAbout->video) }}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
 
+                @else
+                <!-- Default video or empty content if no video available -->
+                <p>No video available.</p>
+                @endif
             </div>
-            <div
-                class="max-w-lg bg-white md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
+            <div class="max-w-lg bg-white md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
                 <div class="flex flex-col p-12 md:px-16">
                     <h2 class="text-2xl font-medium uppercase text-green-800 lg:text-4xl">About Us</h2>
                     <p class="mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat.
+                        @if($frontAbout)
+                        {{ $frontAbout->description }}
+                        @else
+                        At AgroSolveBD, we are committed to revolutionizing agriculture by providing innovative solutions that empower farmers and promote sustainable farming. Our mission is to offer top-quality products, expert advice, and technology to help farmers increase productivity and achieve long-term success. We are dedicated to improving farming practices, making agriculture more efficient, and contributing to a sustainable future for all.
+                        @endif
                     </p>
                     <div class="mt-8">
-                        <a href="/about"
-                            class="inline-block w-full text-center text-lg font-medium text-gray-100 bg-green-600 border-solid border-2 border-gray-600 py-4 px-10 hover:bg-green-800 hover:shadow-md md:w-48">Read
-                            More</a>
+                        <a href="/about" class="inline-block w-full text-center text-lg font-medium text-gray-100 bg-green-600 border-solid border-2 border-gray-600 py-4 px-10 hover:bg-green-800 hover:shadow-md md:w-48">
+                            Read More
+                        </a>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
+
 
 
 
@@ -980,10 +998,10 @@
                                             Technical support
                                         </p>
                                         <p class="text-sm text-neutral-500">
-                                            example@gmail.com
+                                            {{ $contact->email }}
                                         </p>
                                         <p class="text-sm text-neutral-500">
-                                            1-600-890-4567
+                                            {{ $contact->phone }}
                                         </p>
                                     </div>
                                 </div>
@@ -1001,38 +1019,13 @@
                                     </div>
                                     <div class="ml-6 grow">
                                         <p class="mb-2 font-bold ">
-                                            Address
-                                        </p>
-                                        <p class="text-sm text-neutral-500">
-                                            abcd, <br>
-                                            xyz <br>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="mb-12 w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:px-3 lg:mb-12 lg:w-full lg:px-6 xl:w-6/12">
-                                <div class="align-start flex">
-                                    <div class="shrink-0">
-                                        <div class="inline-block rounded-md bg-sky-200 p-4 text-primary">
-                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="w-7 h-7"
-                                                viewBox="0 0 111.756 122.879" enable-background="new 0 0 111.756 122.879" xml:space="preserve">
-                                                <g>
-                                                    <path
-                                                        d="M27.953,5.569v96.769h19.792V5.569H37.456H27.953L27.953,5.569z M21.898,105.123V2.785C21.898,1.247,23.254,0,24.926,0 h12.53h13.316C52.443,0,53.8,1.247,53.8,2.785v102.338c0,1.537-1.356,2.783-3.028,2.783H24.926 C23.254,107.906,21.898,106.66,21.898,105.123L21.898,105.123z M13.32,17.704c1.671,0,3.027,1.247,3.027,2.785 s-1.355,2.784-3.027,2.784H7.352c-0.161,0-0.292,0.022-0.39,0.064c-0.129,0.056-0.276,0.166-0.429,0.325 c-0.161,0.167-0.281,0.346-0.353,0.528c-0.083,0.208-0.125,0.465-0.125,0.759v90.803c0,0.287,0.043,0.537,0.125,0.74l0.034,0.092 c0.068,0.135,0.165,0.264,0.284,0.383c0.126,0.125,0.258,0.217,0.39,0.27c0.123,0.051,0.279,0.074,0.466,0.074h97.052 c0.188,0,0.346-0.025,0.467-0.074c0.133-0.053,0.264-0.145,0.389-0.27c3.035-3.035,0.441,1.799,0.441-1.215V24.949 c0-3.667,3.039,2.357-0.477-1.288c-0.143-0.146-0.287-0.254-0.43-0.314c-0.113-0.048-0.246-0.075-0.391-0.075H62.563 c-1.672,0-3.027-1.247-3.027-2.784s1.355-2.785,3.027-2.785h41.842c1.041,0,2.029,0.204,2.943,0.597 c0.895,0.385,1.699,0.945,2.393,1.663c0.664,0.686,1.17,1.468,1.514,2.334c0.332,0.839,0.502,1.726,0.502,2.652v90.803 c0,0.938-0.168,1.826-0.502,2.654c-0.344,0.859-0.865,1.639-1.549,2.324c-0.701,0.703-1.506,1.234-2.398,1.598 c-0.906,0.367-1.879,0.551-2.902,0.551H7.352c-1.022,0-1.995-0.184-2.901-0.551c-0.894-0.363-1.698-0.896-2.399-1.598 c-0.621-0.623-1.107-1.33-1.45-2.107c-0.036-0.07-0.069-0.143-0.099-0.217C0.168,117.574,0,116.684,0,115.752V24.949 c0-0.921,0.17-1.811,0.504-2.652c0.342-0.863,0.849-1.648,1.512-2.334c0.683-0.707,1.488-1.263,2.393-1.652 c0.929-0.401,1.917-0.607,2.943-0.607H13.32L13.32,17.704z M65.902,29.03h27.049c0.803,0,1.566,0.145,2.291,0.431 c0.076,0.03,0.15,0.063,0.223,0.099c0.607,0.269,1.166,0.635,1.666,1.096c0.584,0.533,1.027,1.128,1.326,1.782 c0.047,0.104,0.088,0.21,0.119,0.317c0.225,0.584,0.34,1.189,0.34,1.812v12.611c0,0.744-0.156,1.45-0.459,2.118l-0.004,0.009 l0.004,0.002c-0.291,0.64-0.725,1.224-1.291,1.75c-0.58,0.546-1.227,0.956-1.932,1.231c-0.736,0.287-1.5,0.426-2.283,0.426H65.902 c-0.777,0-1.535-0.14-2.27-0.426c-0.693-0.269-1.33-0.668-1.912-1.198c-0.588-0.539-1.031-1.144-1.326-1.81 c-0.033-0.078-0.063-0.157-0.09-0.235c-0.234-0.605-0.35-1.228-0.35-1.867V34.567c0-0.723,0.146-1.424,0.445-2.099l-0.006-0.002 c0.295-0.666,0.738-1.271,1.326-1.81l0.037-0.032l-0.002-0.001c0.877-0.78,2.039-1.219,2.119-1.244 C64.537,29.147,65.215,29.03,65.902,29.03L65.902,29.03z M93.475,34.599h-28.08v12.547h28.08V34.599L93.475,34.599z M78.877,63.42 c1.072,0,2.01,0.41,2.807,1.207s1.188,1.734,1.188,2.785c0,1.148-0.389,2.104-1.188,2.865c-0.799,0.758-1.734,1.129-2.807,1.129 c-1.129,0-2.084-0.371-2.844-1.129c-0.76-0.762-1.148-1.717-1.148-2.865c0-1.051,0.391-1.988,1.148-2.785 S77.748,63.42,78.877,63.42L78.877,63.42z M90.977,63.42c1.072,0,2.008,0.41,2.805,1.207s1.189,1.734,1.189,2.785 c0,1.148-0.391,2.104-1.189,2.865c-0.799,0.758-1.732,1.129-2.805,1.129c-1.131,0-2.086-0.371-2.846-1.129 c-0.76-0.762-1.148-1.717-1.148-2.865c0-1.051,0.391-1.988,1.148-2.785S89.846,63.42,90.977,63.42L90.977,63.42z M66.662,75.518 c1.15,0,2.105,0.389,2.865,1.148s1.129,1.715,1.129,2.865c0,1.051-0.371,1.988-1.129,2.785s-1.715,1.209-2.865,1.209 c-1.053,0-1.988-0.412-2.785-1.209s-1.209-1.734-1.209-2.785c0-1.15,0.41-2.105,1.209-2.865S65.609,75.518,66.662,75.518 L66.662,75.518z M78.877,75.518c1.072,0,2.008,0.389,2.807,1.148s1.188,1.715,1.188,2.865c0,1.051-0.391,1.988-1.188,2.785 s-1.734,1.209-2.807,1.209c-1.129,0-2.086-0.412-2.844-1.209s-1.148-1.734-1.148-2.785c0-1.15,0.389-2.105,1.148-2.865 S77.748,75.518,78.877,75.518L78.877,75.518z M90.977,75.518c1.072,0,2.006,0.389,2.805,1.148s1.189,1.715,1.189,2.865 c0,1.051-0.393,1.988-1.189,2.785s-1.732,1.209-2.805,1.209c-1.131,0-2.088-0.412-2.846-1.209s-1.148-1.734-1.148-2.785 c0-1.15,0.389-2.105,1.148-2.865S89.846,75.518,90.977,75.518L90.977,75.518z M66.662,87.518c1.15,0,2.107,0.393,2.865,1.189 s1.129,1.773,1.129,2.922c0,1.053-0.369,1.988-1.129,2.787s-1.715,1.207-2.865,1.207c-1.053,0-1.986-0.408-2.785-1.207 s-1.209-1.734-1.209-2.787c0-1.148,0.412-2.125,1.209-2.922S65.609,87.518,66.662,87.518L66.662,87.518z M78.877,87.518 c1.072,0,2.01,0.393,2.807,1.189s1.188,1.773,1.188,2.922c0,1.053-0.389,1.988-1.188,2.787s-1.734,1.207-2.807,1.207 c-1.129,0-2.084-0.408-2.844-1.207s-1.148-1.734-1.148-2.787c0-1.148,0.391-2.125,1.148-2.922S77.748,87.518,78.877,87.518 L78.877,87.518z M90.977,87.518c1.072,0,2.008,0.393,2.805,1.189s1.189,1.773,1.189,2.922c0,1.053-0.391,1.988-1.189,2.787 s-1.732,1.207-2.805,1.207c-1.131,0-2.086-0.408-2.846-1.207s-1.148-1.734-1.148-2.787c0-1.148,0.391-2.125,1.148-2.922 S89.846,87.518,90.977,87.518L90.977,87.518z M78.877,99.617c1.072,0,2.008,0.389,2.807,1.188s1.188,1.734,1.188,2.807 c0,1.129-0.389,2.084-1.188,2.844s-1.734,1.148-2.807,1.148c-1.129,0-2.084-0.389-2.844-1.148s-1.148-1.715-1.148-2.844 c0-1.072,0.389-2.008,1.148-2.807S77.748,99.617,78.877,99.617L78.877,99.617z M66.662,63.42c1.15,0,2.107,0.41,2.865,1.207 s1.129,1.734,1.129,2.785c0,1.148-0.369,2.104-1.129,2.865c-0.76,0.758-1.715,1.129-2.865,1.129c-1.053,0-1.986-0.371-2.785-1.129 c-0.799-0.762-1.209-1.717-1.209-2.865c0-1.051,0.412-1.988,1.209-2.785S65.609,63.42,66.662,63.42L66.662,63.42z" />
-                                                </g>
-                                            </svg>
+                                            {{ $contact->address }}
 
-                                        </div>
-                                    </div>
-                                    <div class="ml-6 grow">
-                                        <p class="mb-2 font-bold ">Land Line</p>
-                                        <p class="text-neutral-500"> (0421) 431 2030
                                         </p>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:mb-12 xl:w-6/12">
                                 <div class="align-start flex">
                                     <div class="shrink-0">
@@ -1046,7 +1039,7 @@
                                     </div>
                                     <div class="ml-6 grow">
                                         <p class="mb-2 font-bold ">Mobile</p>
-                                        <p class="text-neutral-500"> +91 123456789
+                                        <p class="text-neutral-500"> {{ $contact->number }}
                                         </p>
                                     </div>
                                 </div>
@@ -1059,7 +1052,7 @@
     </section>
 
 
-    <footer class="text-gray-400 bg-white body-font">
+    <footer class="text-gray-400 bg-black body-font">
         <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
             <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+
 </head>
 <style>
     .agro-text {
@@ -101,7 +102,7 @@
             </button>
         </div>
         <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-            <li><a class="text-sm text-blue-600 font-bold hover:text-gray-500" href="#">Home</a></li>
+            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/">Home</a></li>
             <li class="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
@@ -119,7 +120,6 @@
             <!-- Submenu -->
             <ul id="submenu" class="absolute left-0 mt-2 space-y-2 p-3 hidden" style="margin-top: 29%;margin-left: 21%;width: 27%;border-radius: 6px;background: rgba(255, 255, 255, 0.7);border-radius: 16px;box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);backdrop-filter: blur(5px);-webkit-backdrop-filter: blur(5px);border: 1px solid rgba(255, 255, 255, 0.3);">
                 <li><a href="/mission" class="block text-sm hover:text-white hover:bg-black" style="height: 17%;font-size: 15px;font-family: monospace;width: 119%;margin-left: -10px;padding: 10px;text-align: center;">Mission</a></li>
-                <li><a href="/vision" class="block text-sm hover:text-white hover:bg-black" style="height: 17%;font-size: 15px;font-family: monospace;width: 119%;margin-left: -10px;padding: 10px;text-align: center;">Vision</a></li>
             </ul>
             </li>
 
@@ -130,7 +130,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
-            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/price">Pricing</a></li>
+            <li><a class="text-sm text-blue-600 font-bold hover:text-gray-500" href="/price">Pricing</a></li>
             <li class="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
@@ -162,7 +162,7 @@
             <div>
                 <ul>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
+                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/">Home</a>
                     </li>
                     <li class="mb-1">
                         <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/about">About Us</a>
@@ -180,7 +180,7 @@
             </div>
             <div class="mt-auto">
                 <p class="my-4 text-xs text-center text-gray-400">
-                    <span>Copyright Â© 2024</span>
+                    <span>Copyright © 2024</span>
                 </p>
             </div>
         </nav>
@@ -424,7 +424,7 @@
     </section>
 
 
-    <footer class="text-gray-400 bg-white body-font">
+    <footer class="text-gray-400 bg-black body-font">
         <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
             <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">

@@ -104,7 +104,7 @@
 
                     <!-- ITEM -->
                     <li class="text-sm text-gray-500">
-                        <a href="#"
+                        <a href="/dashboard"
                             class="flex items-center w-full py-1 px-2 rounded relative hover:text-white hover:bg-gray-700 {{ Request::is('dashboard') ? 'bg-gray-700 text-white' : '' }}">
                             <div class="pr-2">
                                 <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,6 +116,30 @@
                         </a>
                     </li>
 
+
+                    <!-- Section Devider -->
+                    <div class="section border-b pt-4 mb-4 text-xs text-gray-600 border-gray-700 pb-1 pl-3">
+                        FrontEnd
+                    </div>
+
+                    <!-- ITEM -->
+                    <li class="text-sm text-gray-500 ">
+                        <a href="/frontBanner"
+                            class="flex items-center w-full py-1 px-2 rounded relative hover:text-white hover:bg-gray-700 ">
+                            <div class="pr-2">
+                                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M19.6471 15.5357V8C19.6471 6.11438 19.6471 5.17157 19.0613 4.58579C18.4755 4 17.5327 4 15.6471 4H12M19.6471 15.5357L21.3911 17.3358C21.4356 17.3818 21.4579 17.4048 21.4787 17.4276C21.7998 17.7802 21.9843 18.2358 21.999 18.7124C22 18.7433 22 18.7753 22 18.8393C22 18.9885 22 19.0631 21.996 19.1261C21.9325 20.1314 21.1314 20.9325 20.1261 20.996C20.0631 21 19.9885 21 19.8393 21H4.16068C4.01148 21 3.93688 21 3.87388 20.996C2.86865 20.9325 2.06749 20.1314 2.00398 19.1261C2 19.0631 2 18.9885 2 18.8393C2 18.7753 2 18.7433 2.00096 18.7124C2.01569 18.2358 2.20022 17.7802 2.52127 17.4276C2.54208 17.4048 2.56438 17.3818 2.60888 17.3358L4.35294 15.5357M19.6471 15.5357H17.0357M4.35294 15.5357V8C4.35294 6.11438 4.35294 5.17157 4.93873 4.58579C5.52451 4 6.46732 4 8.35294 4M4.35294 15.5357H13" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path d="M9.5 18.5H14.5" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path d="M12.75 6.75C12.75 7.16421 12.4142 7.5 12 7.5C11.5858 7.5 11.25 7.16421 11.25 6.75C11.25 6.33579 11.5858 6 12 6C12.4142 6 12.75 6.33579 12.75 6.75Z" fill="#6b7280"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div>Banner</div>
+                        </a>
+                    </li>
 
                     <!-- Section Devider -->
                     <div class="section border-b pt-4 mb-4 text-xs text-gray-600 border-gray-700 pb-1 pl-3">
@@ -161,7 +185,7 @@
                     </li>
                     <!-- Section Devider -->
                     <div class="section border-b pt-4 mb-4 text-xs text-gray-600 border-gray-700 pb-1 pl-3">
-                        Frontend
+                        Pages
                     </div>
 
                     <!-- ITEM -->
@@ -193,38 +217,30 @@
                             <div>Mission</div>
                         </a>
                     </li>
-
-                    <!-- ITEM -->
                     <li class="text-sm text-gray-500 ">
-                        <a href="/addPricing"
+                        <a href="/frontContact"
                             class="flex items-center w-full py-1 px-2 rounded relative hover:text-white hover:bg-gray-700 ">
                             <div class="pr-2">
-                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#6b7280">
+                                <svg fill="#9ca3af" version="1.1" id="Layer_1" class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 337.559 337.559" xml:space="preserve" width="64px" height="64px">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                     <g id="SVGRepo_iconCarrier">
-                                        <g clip-path="url(#clip0_443_3628)">
-                                            <rect x="2" y="6" width="20" height="12" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></rect>
-                                            <path d="M22 10C21.4747 10 20.9546 9.89654 20.4693 9.69552C19.984 9.4945 19.543 9.19986 19.1716 8.82843C18.8001 8.45699 18.5055 8.01604 18.3045 7.53073C18.1035 7.04543 18 6.52529 18 6L22 6L22 10Z" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M18 18C18 16.9391 18.4214 15.9217 19.1716 15.1716C19.9217 14.4214 20.9391 14 22 14L22 18L18 18Z" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M2 14C3.06087 14 4.07828 14.4214 4.82843 15.1716C5.57857 15.9217 6 16.9391 6 18L2 18L2 14Z" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M6 6C6 7.06087 5.57857 8.07828 4.82843 8.82843C4.07828 9.57857 3.06087 10 2 10L2 6H6Z" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M14.0741 9.5H11.3333C10.597 9.5 10 10.0596 10 10.75C10 11.4404 10.597 12 11.3333 12H13.1111C13.8475 12 14.4444 12.5596 14.4444 13.25C14.4444 13.9404 13.8475 14.5 13.1111 14.5H10" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M12 9.51733V8.5" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M12 15.5173V14.5" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <path d="M337.559,67.704v-28.33c0-17.506-14.242-31.748-31.748-31.748h-54.572c-4.932-3.021-10.727-4.765-16.922-4.765H32.5 C14.58,2.86,0,17.44,0,35.36v266.838c0,17.921,14.58,32.5,32.5,32.5h201.816c6.196,0,11.992-1.745,16.925-4.767h54.569 c17.506,0,31.748-14.242,31.748-31.748v-28.33c0-9.715-4.391-18.42-11.287-24.248c6.896-5.828,11.287-14.533,11.287-24.248 v-28.331c0-9.715-4.391-18.42-11.287-24.248c6.896-5.828,11.287-14.533,11.287-24.248V116.2c0-9.715-4.391-18.42-11.287-24.248 C333.168,86.123,337.559,77.418,337.559,67.704z M251.816,302.198c0,9.649-7.851,17.5-17.5,17.5H32.5 c-9.649,0-17.5-7.851-17.5-17.5V35.36c0-9.649,7.851-17.5,17.5-17.5h201.816c9.649,0,17.5,7.851,17.5,17.5V302.198z M322.559,298.184c0,9.235-7.513,16.748-16.748,16.748h-41.595c1.673-3.912,2.601-8.216,2.601-12.733v-49.093h38.994 c9.235,0,16.748,7.513,16.748,16.748V298.184z M322.559,221.357c0,9.235-7.513,16.748-16.748,16.748h-38.994v-61.827h38.994 c9.235,0,16.748,7.513,16.748,16.748V221.357z M322.559,144.53c0,9.235-7.513,16.748-16.748,16.748h-38.994V99.451h38.994 c9.235,0,16.748,7.513,16.748,16.748V144.53z M322.559,67.704c0,9.235-7.513,16.748-16.748,16.748h-38.994V35.36 c0-4.518-0.929-8.822-2.602-12.735h41.596c9.235,0,16.748,7.513,16.748,16.748V67.704z"></path>
+                                                    <rect x="40.413" y="230.024" width="185.991" height="15"></rect>
+                                                    <path d="M66.891,206.201h133.035c2.263,0,4.405-1.021,5.829-2.78c1.424-1.759,1.978-4.066,1.507-6.279 c-3.595-16.907-13.071-32.176-26.474-43.02c8.782-10.818,13.689-24.438,13.689-38.522c0-33.674-27.396-61.07-61.07-61.07 s-61.07,27.396-61.07,61.07c0,14.084,4.908,27.704,13.689,38.522c-13.402,10.844-22.878,26.112-26.472,43.02 c-0.471,2.213,0.083,4.521,1.507,6.279C62.486,205.18,64.628,206.201,66.891,206.201z M101.343,161.584 c1.988-1.245,3.279-3.35,3.488-5.687c0.209-2.337-0.687-4.637-2.422-6.216c-9.579-8.718-15.072-21.14-15.072-34.081 c0-25.403,20.667-46.07,46.07-46.07c25.403,0,46.07,20.667,46.07,46.07c0,12.941-5.494,25.363-15.072,34.081 c-1.735,1.579-2.631,3.879-2.422,6.216c0.209,2.337,1.5,4.441,3.488,5.687c11.154,6.989,19.735,17.49,24.42,29.618H76.923 C81.608,179.074,90.189,168.571,101.343,161.584z"></path>
+                                                    <rect x="63.83" y="259.688"></rect>
+                                                </g>
+                                            </g>
                                         </g>
-                                        <defs>
-                                            <clipPath id="clip0_443_3628">
-                                                <rect width="24" height="24" fill="white"></rect>
-                                            </clipPath>
-                                        </defs>
                                     </g>
                                 </svg>
                             </div>
-                            <div>Price</div>
+                            <div>Contact</div>
                         </a>
                     </li>
-
 
                 </ul>
             </nav>
@@ -455,22 +471,13 @@
 
 
             <main class="bg-[#f3f3f9] mb-auto flex-grow">
-                <div class="border-b bg-white border-gray-300 pl-6 py-2 shadow-sm  text-xl font-bold">
-                    Admin Dashboard
-                    <span class="block text-xs font-normal text-gray-300 mt-2">
-                        <a href="#">Home</a> &raquo;
-                        <a href="#">Projects</a> &raquo;
-                        <a href="#">Active</a> &raquo;
-                        <a href="#">Test</a>
-                    </span>
-                </div>
                 <div class="bg-gray-100 min-h-screen flex flex-col p-6">
                     <!-- Dashboard Widgets (Grid Layout) -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         <!-- Total Users Widget -->
                         <div class="bg-gradient-to-t from-red-700 via-rose-600 to-pink-500 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105">
-                            <h3 class="text-xl font-semibold text-white">Total Users</h3>
-                            <p class="text-3xl font-bold text-white">1,500</p>
+                            <h3 class="text-xl font-semibold text-white">Total Product</h3>
+                            <p class="text-3xl font-bold text-white">{{ number_format($totalProducts) }}</p>
                             <div class="mt-3">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"></path>
@@ -480,8 +487,8 @@
 
                         <!-- New Registrations Widget -->
                         <div class="bg-gradient-to-tr from-green-400 via-emerald-500 to-green-700 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105">
-                            <h3 class="text-xl font-semibold text-white">New Registrations</h3>
-                            <p class="text-3xl font-bold text-white">75 this week</p>
+                            <h3 class="text-xl font-semibold text-white">Active Product</h3>
+                            <p class="text-3xl font-bold text-white">{{ number_format($activeProducts) }}</p>
                             <div class="mt-3">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -491,8 +498,8 @@
 
                         <!-- Active Sessions Widget -->
                         <div class="bg-purple-600 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105">
-                            <h3 class="text-xl font-semibold text-white">Active Sessions</h3>
-                            <p class="text-3xl font-bold text-white">320 currently online</p>
+                            <h3 class="text-xl font-semibold text-white">InActive Product</h3>
+                            <p class="text-3xl font-bold text-white">{{ number_format($inactiveProducts) }}</p>
                             <div class="mt-3">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h6l6 14h6"></path>
@@ -501,41 +508,6 @@
                         </div>
                     </div>
 
-                    <!-- More Widgets Section -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                        <!-- Revenue Widget -->
-                        <div class="bg-yellow-500 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105">
-                            <h3 class="text-xl font-semibold text-white">Revenue</h3>
-                            <p class="text-3xl font-bold text-white">$10,000</p>
-                            <div class="mt-3">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v6m-3-3h6"></path>
-                                </svg>
-                            </div>
-                        </div>
-
-                        <!-- Orders Widget -->
-                        <div class="bg-gradient-to-r from-purple-500 to-purple-900 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105">
-                            <h3 class="text-xl font-semibold text-white">Orders</h3>
-                            <p class="text-3xl font-bold text-white">120 Orders</p>
-                            <div class="mt-3">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v6m-3-3h6"></path>
-                                </svg>
-                            </div>
-                        </div>
-
-                        <!-- System Health Widget -->
-                        <div class="bg-gradient-to-r from-red-500 to-red-800 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105">
-                            <h3 class="text-xl font-semibold text-white">System Health</h3>
-                            <p class="text-xl font-semibold text-green-300">All systems operational</p>
-                            <div class="mt-3">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
 

@@ -93,6 +93,7 @@
 <body>
     <div class="md:flex">
 
+
         <!-- sidebar -->
         <div class="sidebar max-h-screen top-0 h-screen bg-gray-800 text-blue-100 w-64 fixed inset-y-0 left-0 transform transition duration-200 ease-in-out z-50"
             x-data="{ open: true }" x-on:togglesidebar.window=" open = !open" x-show="true"
@@ -134,7 +135,7 @@
                     <!-- ITEM -->
                     <li class="text-sm text-gray-500">
                         <a href="/dashboard"
-                            class="flex items-center w-full py-1 px-2 rounded relative hover:text-white hover:bg-gray-700">
+                            class="flex items-center w-full py-1 px-2 rounded relative hover:text-white hover:bg-gray-700 {{ Request::is('dashboard') ? 'bg-gray-700 text-white' : '' }}">
                             <div class="pr-2">
                                 <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -148,13 +149,37 @@
 
                     <!-- Section Devider -->
                     <div class="section border-b pt-4 mb-4 text-xs text-gray-600 border-gray-700 pb-1 pl-3">
+                        FrontEnd
+                    </div>
+
+                    <!-- ITEM -->
+                    <li class="text-sm text-gray-500 ">
+                        <a href="/frontBanner"
+                            class="flex items-center w-full py-1 px-2 rounded relative hover:text-white hover:bg-gray-700 ">
+                            <div class="pr-2">
+                                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path d="M19.6471 15.5357V8C19.6471 6.11438 19.6471 5.17157 19.0613 4.58579C18.4755 4 17.5327 4 15.6471 4H12M19.6471 15.5357L21.3911 17.3358C21.4356 17.3818 21.4579 17.4048 21.4787 17.4276C21.7998 17.7802 21.9843 18.2358 21.999 18.7124C22 18.7433 22 18.7753 22 18.8393C22 18.9885 22 19.0631 21.996 19.1261C21.9325 20.1314 21.1314 20.9325 20.1261 20.996C20.0631 21 19.9885 21 19.8393 21H4.16068C4.01148 21 3.93688 21 3.87388 20.996C2.86865 20.9325 2.06749 20.1314 2.00398 19.1261C2 19.0631 2 18.9885 2 18.8393C2 18.7753 2 18.7433 2.00096 18.7124C2.01569 18.2358 2.20022 17.7802 2.52127 17.4276C2.54208 17.4048 2.56438 17.3818 2.60888 17.3358L4.35294 15.5357M19.6471 15.5357H17.0357M4.35294 15.5357V8C4.35294 6.11438 4.35294 5.17157 4.93873 4.58579C5.52451 4 6.46732 4 8.35294 4M4.35294 15.5357H13" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path d="M9.5 18.5H14.5" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path d="M12.75 6.75C12.75 7.16421 12.4142 7.5 12 7.5C11.5858 7.5 11.25 7.16421 11.25 6.75C11.25 6.33579 11.5858 6 12 6C12.4142 6 12.75 6.33579 12.75 6.75Z" fill="#6b7280"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div>Banner</div>
+                        </a>
+                    </li>
+
+                    <!-- Section Devider -->
+                    <div class="section border-b pt-4 mb-4 text-xs text-gray-600 border-gray-700 pb-1 pl-3">
                         Managment
                     </div>
 
                     <!-- ITEM -->
                     <li class="text-sm text-gray-500 ">
                         <a href="/AddProduct"
-                            class="flex items-center w-full py-1 px-2 rounded relative hover:text-white hover:bg-gray-700  ">
+                            class="flex items-center w-full py-1 px-2 rounded relative hover:text-white hover:bg-gray-700 ">
                             <div class="pr-2">
                                 <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -168,7 +193,7 @@
                     <!-- ITEM -->
                     <li class="text-sm text-gray-500 ">
                         <a href="/AllProducts"
-                            class="flex items-center w-full py-1 px-2 rounded relative hover:text-white hover:bg-gray-700 {{ Request::is('AllProducts') ? 'bg-gray-700 text-white' : '' }}">
+                            class="flex items-center w-full py-1 px-2 rounded relative text-white bg-gray-700 ">
                             <div class="pr-2">
                                 <svg fill="#6b7280" class="h-4 w-4" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 467.2 467.2" xml:space="preserve">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -188,7 +213,64 @@
                             <div>View Product</div>
                         </a>
                     </li>
+                    <!-- Section Devider -->
+                    <div class="section border-b pt-4 mb-4 text-xs text-gray-600 border-gray-700 pb-1 pl-3">
+                        Pages
+                    </div>
 
+                    <!-- ITEM -->
+                    <li class="text-sm text-gray-500 ">
+                        <a href="/frontMission"
+                            class="flex items-center w-full py-1 px-2 rounded relative hover:text-white hover:bg-gray-700 ">
+                            <div class="pr-2">
+                                <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" class="h-4 w-4" fill="#9ca3af">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <style type="text/css">
+                                            .st0 {
+                                                fill: none;
+                                                stroke: #4b6b73;
+                                                stroke-width: 2;
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                                stroke-miterlimit: 10;
+                                            }
+                                        </style>
+                                        <line class="st0" x1="16" y1="16" x2="22" y2="10"></line>
+                                        <polygon class="st0" points="30,6 26,6 26,2 22,6 22,10 26,10 "></polygon>
+                                        <circle class="st0" cx="16" cy="16" r="6"></circle>
+                                        <path class="st0" d="M27,9c1.3,2,2,4.4,2,7c0,7.2-5.8,13-13,13S3,23.2,3,16S8.8,3,16,3c2.6,0,5,0.7,7,2"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div>Mission</div>
+                        </a>
+                    </li>
+                    <li class="text-sm text-gray-500 ">
+                        <a href="/frontContact"
+                            class="flex items-center w-full py-1 px-2 rounded relative hover:text-white hover:bg-gray-700 ">
+                            <div class="pr-2">
+                                <svg fill="#9ca3af" version="1.1" id="Layer_1" class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 337.559 337.559" xml:space="preserve" width="64px" height="64px">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <path d="M337.559,67.704v-28.33c0-17.506-14.242-31.748-31.748-31.748h-54.572c-4.932-3.021-10.727-4.765-16.922-4.765H32.5 C14.58,2.86,0,17.44,0,35.36v266.838c0,17.921,14.58,32.5,32.5,32.5h201.816c6.196,0,11.992-1.745,16.925-4.767h54.569 c17.506,0,31.748-14.242,31.748-31.748v-28.33c0-9.715-4.391-18.42-11.287-24.248c6.896-5.828,11.287-14.533,11.287-24.248 v-28.331c0-9.715-4.391-18.42-11.287-24.248c6.896-5.828,11.287-14.533,11.287-24.248V116.2c0-9.715-4.391-18.42-11.287-24.248 C333.168,86.123,337.559,77.418,337.559,67.704z M251.816,302.198c0,9.649-7.851,17.5-17.5,17.5H32.5 c-9.649,0-17.5-7.851-17.5-17.5V35.36c0-9.649,7.851-17.5,17.5-17.5h201.816c9.649,0,17.5,7.851,17.5,17.5V302.198z M322.559,298.184c0,9.235-7.513,16.748-16.748,16.748h-41.595c1.673-3.912,2.601-8.216,2.601-12.733v-49.093h38.994 c9.235,0,16.748,7.513,16.748,16.748V298.184z M322.559,221.357c0,9.235-7.513,16.748-16.748,16.748h-38.994v-61.827h38.994 c9.235,0,16.748,7.513,16.748,16.748V221.357z M322.559,144.53c0,9.235-7.513,16.748-16.748,16.748h-38.994V99.451h38.994 c9.235,0,16.748,7.513,16.748,16.748V144.53z M322.559,67.704c0,9.235-7.513,16.748-16.748,16.748h-38.994V35.36 c0-4.518-0.929-8.822-2.602-12.735h41.596c9.235,0,16.748,7.513,16.748,16.748V67.704z"></path>
+                                                    <rect x="40.413" y="230.024" width="185.991" height="15"></rect>
+                                                    <path d="M66.891,206.201h133.035c2.263,0,4.405-1.021,5.829-2.78c1.424-1.759,1.978-4.066,1.507-6.279 c-3.595-16.907-13.071-32.176-26.474-43.02c8.782-10.818,13.689-24.438,13.689-38.522c0-33.674-27.396-61.07-61.07-61.07 s-61.07,27.396-61.07,61.07c0,14.084,4.908,27.704,13.689,38.522c-13.402,10.844-22.878,26.112-26.472,43.02 c-0.471,2.213,0.083,4.521,1.507,6.279C62.486,205.18,64.628,206.201,66.891,206.201z M101.343,161.584 c1.988-1.245,3.279-3.35,3.488-5.687c0.209-2.337-0.687-4.637-2.422-6.216c-9.579-8.718-15.072-21.14-15.072-34.081 c0-25.403,20.667-46.07,46.07-46.07c25.403,0,46.07,20.667,46.07,46.07c0,12.941-5.494,25.363-15.072,34.081 c-1.735,1.579-2.631,3.879-2.422,6.216c0.209,2.337,1.5,4.441,3.488,5.687c11.154,6.989,19.735,17.49,24.42,29.618H76.923 C81.608,179.074,90.189,168.571,101.343,161.584z"></path>
+                                                    <rect x="63.83" y="259.688"></rect>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div>Contact</div>
+                        </a>
+                    </li>
 
                 </ul>
             </nav>
@@ -267,7 +349,24 @@
                             </div>
 
 
-
+                            <div class="hidden lg:block">
+                                <!-- Search -->
+                                <form action="" class="app-search" method="GET">
+                                    <div class="relative group ">
+                                        <input type="text"
+                                            class="form-input rounded-md bg-gray-700 text-sm text-gray-300 pl-10 py-1.5 ml-5 border-transparent border-none outline-none focus:ring-0 focus:text-white transition-all duration-300 ease-in-out focus:w-60 w-48"
+                                            placeholder="Search..." autocomplete="off">
+                                        <span
+                                            class="absolute left-44 bottom-2 text-gray-400 transition-all duration-300 ease-in-out group-focus-within:left-8">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                         <div class="hidden md:flex items-stretch">
                             <!-- Profile Menu DT -->
@@ -291,7 +390,6 @@
                                     </a>
                                 </div>
 
-
                                 <!-- Profile dropdown -->
                                 <div class="relative bg-gray-700 px-4 text-gray-400 hover:text-white text-sm cursor-pointer" x-data="{ open: false }">
                                     <div class="flex items-center min-h-full" @click="open = !open">
@@ -308,11 +406,15 @@
                                     </div>
 
                                     <!-- Dropdown content for logout -->
-                                    <div x-show="open" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20">
-                                        <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded">
-                                            Logout
-                                        </a>
+                                    <div x-show="open" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20" style="background-color: rgb(55, 65, 81); color: white;">
+                                        <form action="{{ route('logout') }}" method="POST" id="logout-form">
+                                            @csrf
+                                            <button type="submit" class="block px-4 py-2 text-sm text-white  rounded w-full text-left" @click=" open=false">
+                                                Logout
+                                            </button>
+                                        </form>
                                     </div>
+
                                 </div>
 
                             </div>
@@ -355,8 +457,8 @@
                         <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
                             aria-current="page">Dashboard</a>
 
-                        <a href="#"
-                            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+                        <aEvintas href="#"
+                            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</aEvintas>
                     </div>
 
                     <div class="pt-4 pb-3 border-t border-gray-700">
@@ -395,6 +497,8 @@
                 </div>
             </nav>
             <!-- End Top navbar -->
+
+
 
 
 

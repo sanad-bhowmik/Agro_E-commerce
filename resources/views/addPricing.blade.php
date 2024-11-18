@@ -488,20 +488,16 @@
 
             <main class="bg-[#f3f3f9] mb-auto flex-grow">
                 <div class="border-b bg-white border-gray-300 pl-6 py-2 shadow-sm  text-xl font-bold">
-                    Mission
+                    Pricing
                     <span class="block text-xs font-normal text-gray-300 mt-2">
                         <a href="#">Home</a> &raquo;
                         <a href="#">Front</a> &raquo;
-                        <a href="#">Mission</a> &raquo;
+                        <a href="#">Pricing</a>
                     </span>
                 </div>
                 <div class="bg-gray-100 min-h-screen flex justify-center items-center p-6">
                     <div class="bg-white p-8 rounded-lg shadow-md" style="width: 98%;">
                         <!-- Product Upload Form -->
-                        <!-- Hero Section Title -->
-                        <div class="mb-6">
-                            <h2 class="text-3xl font-bold text-center text-gray-800">Hero Section</h2>
-                        </div>
 
                         <form action="{{ route('storePricing') }}" id="priceCardForm" method="POST" enctype="multipart/form-data">
                             @csrf
@@ -510,7 +506,7 @@
                             <div class="space-y-6">
                                 @for($i = 1; $i <= 3; $i++)
                                     <div class="shadow-lg p-6 rounded-lg bg-white border border-gray-300 hover:shadow-2xl transition duration-300">
-                                    <span class="text-lg font-semibold text-gray-800">Add Price Card {{ $i }}</span>
+                                    <span class="text-lg font-semibold text-gray-800">Price {{ $i }}</span>
 
                                     <!-- Card Title and Price -->
                                     <div class="flex gap-4 mt-4">
@@ -520,7 +516,6 @@
 
                                     <!-- Features Input as Tags -->
                                     <div class="mt-4">
-                                        <label class="font-semibold text-gray-700">Features for Card {{ $i }}:</label>
                                         <div class="border border-gray-300 rounded-md p-2" id="featureContainer{{ $i }}">
                                             <input type="text" id="featureInput{{ $i }}" class="w-full p-2 focus:outline-none" placeholder="Type feature and press Enter" onkeydown="addFeature(event, {{ $i }})" />
                                             <input type="hidden" name="cardFeatures{{ $i }}" id="hiddenFeatures{{ $i }}" />
@@ -565,24 +560,35 @@
     function addFeature(event, cardIndex) {
         if (event.key === 'Enter') {
             event.preventDefault();
+
             const input = document.getElementById(`featureInput${cardIndex}`);
             const tagContainer = document.getElementById(`featureTags${cardIndex}`);
             const hiddenInput = document.getElementById(`hiddenFeatures${cardIndex}`);
 
             const featureText = input.value.trim();
             if (featureText) {
+                // Check if the feature is already added
+                const currentFeatures = hiddenInput.value ? JSON.parse(hiddenInput.value) : [];
+                if (currentFeatures.includes(featureText)) {
+                    alert("Feature already added!");
+                    input.value = '';
+                    return;
+                }
+
                 // Create tag element
                 const tag = document.createElement('span');
-                tag.className = 'bg-blue-500 text-white px-2 py-1 rounded-full flex items-center';
-                tag.innerHTML = `${featureText} <button type="button" onclick="removeFeature(this, ${cardIndex}, '${featureText}')" class="ml-1">×</button>`;
+                tag.className = 'bg-blue-500 text-white px-2 py-1 rounded-full flex items-center gap-2';
+                tag.innerHTML = `
+                <span>${featureText}</span>
+                <button type="button" onclick="removeFeature(this, ${cardIndex}, '${featureText}')" class="text-white font-bold hover:text-red-500">×</button>
+            `;
 
                 // Add tag to the container
                 tagContainer.appendChild(tag);
 
                 // Add feature to hidden input
-                const currentFeatures = hiddenInput.value ? hiddenInput.value.split(',') : [];
                 currentFeatures.push(featureText);
-                hiddenInput.value = currentFeatures.join(',');
+                hiddenInput.value = JSON.stringify(currentFeatures);
 
                 // Clear the input field
                 input.value = '';
@@ -594,14 +600,16 @@
         const tagContainer = document.getElementById(`featureTags${cardIndex}`);
         const hiddenInput = document.getElementById(`hiddenFeatures${cardIndex}`);
 
-        // Remove the tag element
-        button.parentElement.remove();
+        // Remove the tag from the container
+        const tag = button.parentElement;
+        tagContainer.removeChild(tag);
 
-        // Remove feature from hidden input
-        const currentFeatures = hiddenInput.value.split(',');
-        const updatedFeatures = currentFeatures.filter(feature => feature !== featureText);
-        hiddenInput.value = updatedFeatures.join(',');
+        // Update the hidden input value
+        let currentFeatures = hiddenInput.value ? JSON.parse(hiddenInput.value) : [];
+        currentFeatures = currentFeatures.filter(feature => feature !== featureText);
+        hiddenInput.value = JSON.stringify(currentFeatures);
     }
+
 
     document.addEventListener("DOMContentLoaded", function() {
         var toast = document.getElementById("custom-toast");

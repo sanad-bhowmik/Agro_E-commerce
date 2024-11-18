@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
+use App\Models\Contact;
+use App\Models\FrontAbout;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -9,11 +12,24 @@ class ProductController extends Controller
 {
     public function index()
     {
-        // Retrieve products where status is 1 (Active)
+        // Fetch the products where status is 1
         $products = Product::where('status', 1)->get();
 
-        return view('welcome', compact('products'));
+        // Fetch the latest banner
+        $banner = Banner::latest()->first();
+
+        // Fetch the front about section where status is 'active'
+        $frontAbout = FrontAbout::where('status', 'active')->latest()->first();
+
+        // Fetch the contact information (assuming you need all records or just one)
+        $contact = Contact::latest()->first(); // Adjust the query if needed (e.g., where status = 'active')
+
+        // Return the view with all the data
+        return view('welcome', compact('products', 'banner', 'frontAbout', 'contact'));
     }
+
+
+
 
     public function show($id)
     {
