@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
-                <h2 class="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl xl:text-bold">Log in</h2>
+                <h2 class="text-center text-4xl text-green-800 font-display font-semibold lg:text-left xl:text-5xl xl:text-bold">Log in</h2>
                 <div class="mt-12">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
