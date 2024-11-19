@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Eventas</title>
-    <link rel="icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20230212/ourmid/pngtree-organic-fair-and-agro-garden-logo-design-png-image_6593571.png">
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQdSPKEv1mNQUcChuwUqcjgm--Wh0XmEwqQ&s">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -41,19 +41,58 @@
                         @csrf
                         <div>
                             <div class="text-sm font-bold text-gray-700 tracking-wide">Email Address</div>
-                            <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="email" name="email" value="{{ old('email') }}" placeholder="mike@gmail.com" required>
+                            <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" style="padding: 10px; type=" email" name="email" value="{{ old('email') }}" placeholder="mike@gmail.com" required>
                         </div>
                         <div class="mt-8">
                             <div class="flex justify-between items-center">
                                 <div class="text-sm font-bold text-gray-700 tracking-wide">Password</div>
-                                <div>
-                                    <a class="text-xs font-display font-semibold text-indigo-600 hover:text-indigo-800 cursor-pointer">
-                                        Forgot Password?
-                                    </a>
-                                </div>
+
                             </div>
-                            <input class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="password" name="password" placeholder="Enter your password" required>
+                            <div class="relative">
+                                <input
+                                    id="password"
+                                    class="w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
+                                    type="password"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    required
+                                    style="padding: 10px;">
+                                <span
+                                    id="togglePassword"
+                                    class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer">
+                                    <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                    <svg id="eyeSlashIcon" xmlns="http://www.w3.org/2000/svg" class="hidden h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.98 8.793A9.929 9.929 0 002.458 12c1.274 4.057 5.065 7 9.542 7 2.615 0 5.007-.93 6.868-2.465M3.98 8.793l15.034 15.034M9 12a3 3 0 003 3m0-6a3 3 0 013 3m0 0a3 3 0 01-3 3m0 0a3 3 0 01-3-3" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <a class="text-xs font-display font-semibold text-indigo-600 hover:text-indigo-800 cursor-pointer">
+                                    Forgot Password?
+                                </a>
+                            </div>
                         </div>
+
+                        <script>
+                            const passwordInput = document.getElementById("password");
+                            const togglePassword = document.getElementById("togglePassword");
+                            const eyeIcon = document.getElementById("eyeIcon");
+                            const eyeSlashIcon = document.getElementById("eyeSlashIcon");
+
+                            togglePassword.addEventListener("click", () => {
+                                // Toggle password visibility
+                                const isPasswordVisible = passwordInput.type === "password";
+                                passwordInput.type = isPasswordVisible ? "text" : "password";
+
+                                // Toggle icons
+                                eyeIcon.classList.toggle("hidden", !isPasswordVisible);
+                                eyeSlashIcon.classList.toggle("hidden", isPasswordVisible);
+                            });
+                        </script>
+
                         <div class="mt-10">
                             <button class="bg-indigo-500 text-gray-100 p-4 w-full rounded-full tracking-wide font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg" type="submit">
                                 Log In

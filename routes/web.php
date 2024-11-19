@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProductController;
 use App\Models\Contact;
 use App\Models\Mission;
@@ -27,10 +28,10 @@ Route::get('/about', function () {
 });
 Route::get('/product', [ProductController::class, 'index2'])->name('product.index2');
 
-
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
 
 Route::get('/contact', function () {
-    $contact = Contact::latest()->first(); 
+    $contact = Contact::latest()->first();
     return view('contact', compact('contact'));
 });
 
@@ -79,4 +80,8 @@ Route::post('/front-about', [DashboardController::class, 'saveFrontAbout'])->nam
 
 Route::get('/frontContact', [DashboardController::class, 'frontContact'])->name('frontContact');
 Route::post('/frontContact', [DashboardController::class, 'updateContact'])->name('updateContact');
+
+
+Route::get('/frontGallery', [DashboardController::class, 'frontGallery'])->name('frontGallery');
+Route::post('/storePricing', [DashboardController::class, 'ImageUpload'])->name('storePricing');
 // <<<<<<<<<<<<<<<<<<<<<    Dashboard    >>>>>>>>>>>>>>>>>>>>>>

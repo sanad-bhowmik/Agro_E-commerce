@@ -7,7 +7,7 @@
     <!-- @vite('resources/css/app.css') -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Eventas Crop care</title>
-    <link rel="icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20230212/ourmid/pngtree-organic-fair-and-agro-garden-logo-design-png-image_6593571.png">
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQdSPKEv1mNQUcChuwUqcjgm--Wh0XmEwqQ&s">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
@@ -129,7 +129,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
-            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/price">Pricing</a></li>
+            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="/gallery">Gallery</a></li>
             <li class="text-gray-300">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
@@ -983,38 +983,30 @@
                     <div class="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
                         <div class="flex flex-wrap">
                             <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
-                                <div class="flex items-start">
-                                    <div class="shrink-0">
-                                        <div class="inline-block rounded-md bg-sky-200 p-4 text-primary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                                stroke="currentColor" class="h-6 w-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
-                                            </svg>
+                                <a href="mailto:{{ $contact->email }}" class="block">
+                                    <div class="flex items-start">
+                                        <div class="shrink-0">
+                                            <div class="inline-block rounded-md bg-sky-200 p-4 text-primary">
+                                                <img src="/img/gmail.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="ml-6 grow">
+                                            <p class="mb-2 font-bold">
+                                                Email
+                                            </p>
+                                            <p class="text-sm text-neutral-500">
+                                                {{ $contact->email }}
+                                            </p>
                                         </div>
                                     </div>
-                                    <div class="ml-6 grow">
-                                        <p class="mb-2 font-bold ">
-                                            Technical support
-                                        </p>
-                                        <p class="text-sm text-neutral-500">
-                                            {{ $contact->email }}
-                                        </p>
-                                        <p class="text-sm text-neutral-500">
-                                            {{ $contact->phone }}
-                                        </p>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
+
                             <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:w-6/12">
                                 <div class="flex items-start">
                                     <div class="srink-0">
-                                        <div class="inline-block rounded-md bg-sky-200 p-4 text-primary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                                stroke="currentColor" class="w-7 h-7">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
-                                            </svg>
+                                        <div class="inline-block rounded-md bg-sky-200  text-primary">
+                                            <img src="/img/location-pin.png" alt="">
                                         </div>
                                     </div>
                                     <div class="ml-6 grow">
@@ -1030,11 +1022,7 @@
                                 <div class="align-start flex">
                                     <div class="shrink-0">
                                         <div class="inline-block rounded-md bg-sky-200 p-4 text-primary">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                                stroke="currentColor" class="w-6 h-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-                                            </svg>
+                                            <img src="/img/telephone.png" alt="">
                                         </div>
                                     </div>
                                     <div class="ml-6 grow">
@@ -1043,6 +1031,20 @@
                                         </p>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="w-full shrink-0 grow-0 basis-auto md:w-6/12 md:px-3 lg:w-full lg:px-6 xl:mb-12 xl:w-6/12">
+                                <a href="https://www.facebook.com/p/Eventas-Crop-Care-Ltd-100094254862757/">
+                                    <div class="align-start flex">
+                                        <div class="shrink-0">
+                                            <div class="inline-block rounded-md bg-sky-200 p-4 text-primary">
+                                                <img src="/img/facebook.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="grow">
+                                            <p class="font-bold " style="margin-top: 20px;color: #507dd2;">@EventasCropCare</p>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1064,7 +1066,7 @@
                 <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@knyttneve</a>
             </p>
             <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-                <a class="text-gray-400">
+                <a class="text-gray-400" href="https://www.facebook.com/p/Eventas-Crop-Care-Ltd-100094254862757/">
                     <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                     </svg>

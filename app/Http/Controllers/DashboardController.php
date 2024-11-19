@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Banner;
 use App\Models\Contact;
 use App\Models\FrontAbout;
+use App\Models\Gallery;
 use App\Models\Price;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -47,7 +48,7 @@ class DashboardController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . '_' . $image->getClientOriginalName();
-            $image->move(public_path('img/frontend/mission'), $imageName);
+            $image->move(base_path('img/frontend/mission'), $imageName);
         }
 
         // Insert data into mission_details table
@@ -131,21 +132,21 @@ class DashboardController extends Controller
         if ($request->hasFile('firstVideo')) {
             $firstVideo = $request->file('firstVideo');
             $firstVideoName = uniqid() . '_' . $firstVideo->getClientOriginalName();  // Generate unique file name
-            $firstVideo->move(public_path('vid'), $firstVideoName);
+            $firstVideo->move(base_path('vid'), $firstVideoName);
             $banner->firstVideo = $firstVideoName;
         }
 
         if ($request->hasFile('secondVideo')) {
             $secondVideo = $request->file('secondVideo');
             $secondVideoName = uniqid() . '_' . $secondVideo->getClientOriginalName();
-            $secondVideo->move(public_path('vid'), $secondVideoName);
+            $secondVideo->move(base_path('vid'), $secondVideoName);
             $banner->secondVideo = $secondVideoName;
         }
 
         if ($request->hasFile('thirdVideo')) {
             $thirdVideo = $request->file('thirdVideo');
             $thirdVideoName = uniqid() . '_' . $thirdVideo->getClientOriginalName();
-            $thirdVideo->move(public_path('vid'), $thirdVideoName);
+            $thirdVideo->move(base_path('vid'), $thirdVideoName);
             $banner->thirdVideo = $thirdVideoName;
         }
 
@@ -167,7 +168,7 @@ class DashboardController extends Controller
         // Handle file upload
         if ($request->hasFile('video')) {
             $videoName = time() . '_' . $request->file('video')->getClientOriginalName();
-            $videoPath = public_path('vid');
+            $videoPath = base_path('vid');
 
             if (!file_exists($videoPath)) {
                 mkdir($videoPath, 0777, true);
@@ -213,5 +214,29 @@ class DashboardController extends Controller
         $contact->save();
 
         return redirect()->route('frontContact')->with('success', 'Contact details updated successfully!');
+    }
+
+    public function frontGallery()
+    {
+
+        return view('frontGallery');
+    }
+
+    public function ImageUpload(Request $request)
+    {
+        $request->validate([
+            'pictures' => 'required|array',
+            'pictures.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        foreach ($request->file('pictures') as $image) {
+            $imageName = time() . '_' . $image->getClientOriginalName();
+            $image->move(base_path('img/gallery'), $imageName);
+            Gallery::create([
+                'img' => $imageName,
+            ]);
+        }
+
+        return redirect()->route('frontGallery')->with('success', 'Images uploaded successfully!');
     }
 }
