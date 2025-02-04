@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- @vite('resources/css/app.css') -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Eventas Crop care</title>
+    <title>ইভেন্টাস Crop care</title>
     <link rel="icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20230212/ourmid/pngtree-organic-fair-and-agro-garden-logo-design-png-image_6593571.png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">

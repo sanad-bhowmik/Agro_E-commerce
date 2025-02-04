@@ -40,7 +40,17 @@ class ProductController extends Controller
     {
         $products = Product::all();
 
-        return view('product', compact('products'));
+        return view('components.product', compact('products'));
+    }
+    public function kitnasok()
+    {
+
+        return view('components.kitnasok');
+    }
+    public function cropProtection()
+    {
+
+        return view('components.cropProtection');
     }
     public function admin()
     {
@@ -101,4 +111,14 @@ class ProductController extends Controller
 
         return response()->json(['success' => true]);
     }
+
+
+
+    // Product Details
+    public function furnace()
+    {
+
+        return view('components.productDetails.furnace');
+    }
+    // Product Details
 }

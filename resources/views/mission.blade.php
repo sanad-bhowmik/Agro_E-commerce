@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     @vite('resources/css/app.css')
-    <title>Eventas | Mission</title>
+    <title>ইভেন্টাস | Mission</title>
     <link rel="icon" type="image/x-icon"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQdSPKEv1mNQUcChuwUqcjgm--Wh0XmEwqQ&s">
     <link rel="preconnect" href="https://fonts.bunny.net">

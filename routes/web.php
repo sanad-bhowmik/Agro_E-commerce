@@ -24,9 +24,20 @@ Route::get('/mission', function () {
 
 
 Route::get('/about', function () {
-    return view('about');
+    return view('components.about');
 });
 Route::get('/product', [ProductController::class, 'index2'])->name('product.index2');
+Route::get('/kitnasok', [ProductController::class, 'kitnasok'])->name('product.kitnasok');
+Route::get('/cropProtection', [ProductController::class, 'cropProtection'])->name('product.cropProtection');
+
+// Product Details
+Route::get('/furnace', [ProductController::class, 'furnace'])->name('product.furnace');
+
+// Product Details
+
+
+
+
 
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
 

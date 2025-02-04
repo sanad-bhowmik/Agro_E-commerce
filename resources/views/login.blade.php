@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Eventas</title>
+    <title>Login | ইভেন্টাস</title>
     <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQdSPKEv1mNQUcChuwUqcjgm--Wh0XmEwqQ&s">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
@@ -31,7 +31,7 @@
                             </g>
                         </svg>
                     </div>
-                    <div class="text-2xl text-green-800 tracking-wide ml-2 font-semibold">Eventas</div>
+                    <div class="text-2xl text-green-800 tracking-wide ml-2 font-semibold">ইভেন্টাস</div>
                 </div>
             </div>
             <div class="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">

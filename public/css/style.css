@@ -1,0 +1,75 @@
+body{
+    background-color: white;
+}
+#intro {
+    width: 80vw;
+    max-width: 177vh;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #intro {
+        width: 90vw;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 1.6;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Extra small screens (phones under 480px) */
+@media (max-width: 480px) {
+    #intro {
+        width: 95vw;
+        font-size: 13px; /* Smaller text */
+        line-height: 1.5;
+        padding: 8px;
+    }
+}
+#kollan {
+    width: 188vh;
+    margin-left: -99px;
+    line-height: 30px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #kollan {
+        width: 90vw;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 1.6;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Extra small screens (phones under 480px) */
+@media (max-width: 480px) {
+    #kollan {
+        width: 95vw;
+        font-size: 13px; /* Smaller text */
+        line-height: 1.5;
+        padding: 8px;
+    }
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .clip-triangle {
+        display: none;
+    }
+}
+
+/* Extra small screens (phones under 480px) */
+@media (max-width: 480px) {
+    .clip-triangle {
+        display: none;
+    }
+}

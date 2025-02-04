@@ -1,44 +1,63 @@
-<footer class="text-gray-400 bg-black body-font">
-    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-        <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-            <img src="/img/images.png" alt="logo" style="height: 39px;">
-        </a>
-        <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">©
-            2024 Eventas —
-            <a href="https://playon24.com.bd/" class="text-gray-500 ml-1" target="_blank"
-                rel="noopener noreferrer">PlayOn24</a>
-        </p>
-        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <a class="text-gray-400" href="https://www.facebook.com/p/Eventas-Crop-Care-Ltd-100094254862757/">
-                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
-                    viewBox="0 0 24 24">
-                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                </svg>
-            </a>
-            <a class="ml-3 text-gray-400">
-                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
-                    viewBox="0 0 24 24">
-                    <path
-                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
-                    </path>
-                </svg>
-            </a>
-            <a class="ml-3 text-gray-400">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    class="w-5 h-5" viewBox="0 0 24 24">
-                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                </svg>
-            </a>
-            <a class="ml-3 text-gray-400">
-                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                    stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                    <path stroke="none"
-                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
-                    </path>
-                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                </svg>
-            </a>
-        </span>
+<footer class="bg-gray-200 py-8 mt-16" style="border-top: 1px solid gray;">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- নতুন পণ্য Section -->
+            <div>
+                <h3 class="text-xl  text-red-600 mb-4">নতুন পণ্য</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3">
+                        <img src="/img/cardPro1.png" alt="Product 1" class="w-10 h-10 rounded">
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="/img/cardPro3.png" alt="Product 2" class="w-10 h-10 rounded">
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="/img/cardPro2.png" alt="Product 3" class="w-10 h-10 rounded">
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <img src="/img/cardPro4.png" alt="Product 4" class="w-10 h-10 rounded">
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ইভেন্টাস র তাজা খবর Section -->
+            <div>
+                <h3 class="text-xl  text-red-600 mb-4">ইভেন্টাস র তাজা খবর</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li>জলবায়ু পরিবর্তন, বৃষ্টিপাতের খেলাধুলা ও আমন ধান উৎপাদনে করণীয়</li>
+                    <li>ইভেন্টাস  এবং বাংলাদেশ কৃষি গবেষণা ইনস্টিটিউট-এর মধ্যে সমঝোতা স্মারক স্বাক্ষর</li>
+                    <li>ভোজ্য তেলের চাহিদা পূরণে সম্ভাবনাময় সূর্যমুখী-এর উৎপাদন কৌশল</li>
+                    <li>মাছ ও ডিডিসি রোগ-ব্যবস্থাপনা</li>
+                    <li>কার্বন ডাই-অক্সাইড: মৎস্যচাষে গুরুত্ব</li>
+                </ul>
+            </div>
+
+            <!-- ইভেন্টাস  Contact Info Section -->
+            <div>
+                <h3 class="text-xl font-bold text-green-600 mb-4 flex items-center">
+                <img src="/img/images.png" class="h-10 w-10" alt="">
+                </h3>
+                <p class="text-gray-700">📍 1/B, 1/29, Mridha Complex, kalwalapara, mirpur-1</p>
+                <p class="text-gray-700">🇧🇩 বাংলাদেশ</p>
+                <p class="text-gray-700">📧 <a href="mailto:info@eccl.com.bd" class="text-blue-500">info@eccl.com.bd</a></p>
+                <p class="text-gray-700">📞 01719-867171</p>
+                <p class="text-gray-700">🌐 <a href="https://www.intefa.com.bd" class="text-blue-500">www.intefa.com.bd</a></p>
+                <p class="text-gray-700">📘 <a href="#" class="text-blue-500">Find us on Facebook</a></p>
+            </div>
+
+        </div>
+    </footer>
+    <footer class="bg-gray-800 text-white py-4 px-3">
+    <div class="container mx-auto flex flex-wrap items-center justify-between">
+        <div class="w-full md:w-1/2 md:text-center md:mb-0 mb-8">
+            <p class="text-xs text-gray-400 md:text-sm">Copyright 2020 &copy; All Rights Reserved</p>
+        </div>
+        <div class="w-full md:w-1/2 md:text-center md:mb-0 mb-8">
+            <ul class="list-reset flex justify-center flex-wrap text-xs md:text-sm gap-3">
+                <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                <li class="mx-4"><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Terms of Use</a></li>
+            </ul>
+        </div>
     </div>
 </footer>

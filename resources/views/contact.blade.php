@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/css/app.css')
-    <title>Eventas | Contact</title>
+    <title>ইভেন্টাস | Contact</title>
     <link rel="icon" type="image/x-icon"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQdSPKEv1mNQUcChuwUqcjgm--Wh0XmEwqQ&s">
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -49,65 +49,70 @@
 
     @include('partials.nav')
 
-    <section class="py-24">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" style="border: 1px solid #f9f9f9;padding: 29px;">
-            <div class="grid lg:grid-cols-2 grid-cols-1 gap-x-24">
-                <div class="flex items-center lg:mb-0 mb-10">
-                    <div class="">
-                        <h4 class="text-indigo-600 text-base font-medium leading-6 mb-4 lg:text-left text-center">
-                            Contact Us</h4>
-                        <h2
-                            class="text-gray-900 font-manrope text-4xl font-semibold leading-10 mb-9 lg:text-left text-center">
-                            Reach Out To Us</h2>
-                        <form action="">
-                            <input type="text"
-                                class="w-full h-14 shadow-sm text-gray-600 placeholder-text-400 text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none py-2 px-4 mb-8"
-                                placeholder="Name">
-                            <input type="email"
-                                class="w-full h-14 shadow-sm text-gray-600 placeholder-text-400 text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none py-2 px-4 mb-8"
-                                placeholder="Email">
-                            <textarea name="" id="text"
-                                class="w-full h-48 shadow-sm resize-none text-gray-600 placeholder-text-400 text-lg font-normal leading-7 rounded-2xl border border-gray-200 focus:outline-none px-4 py-4 mb-8"
-                                placeholder="Phone"></textarea>
-                            <button
-                                class="w-full h-12 text-center text-white text-base font-semibold leading-6 rounded-full bg-indigo-600 shadow transition-all duration-700 hover:bg-indigo-800">Submit</button>
-                        </form>
+    <div class="container mx-auto p-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-lg p-6">
+            <!-- Contact Information -->
+            <div>
+                <h2 class="text-2xl font-bold text-red-500 mb-4">যোগাযোগ করুন</h2>
+                <div class="text-sm space-y-4">
+                    <div>
+                        <h3 class="font-semibold">কর্মধারী অফিস</h3>
+                        <p>স্ট্রীট নাম্বার<br>১০৬-১১৬, পথ অ্যালেক্স, ঢাকা-১২১৭<br>বাংলাদেশ</p>
+                        <p>Email: <a href="mailto:info@infaltd.com.bd" class="text-blue-500">info@infaltd.com.bd</a></p>
+                        <p>Phone: +880-2-222295218, +880-2-8319469</p>
                     </div>
-                </div>
-                <div
-                    class="lg:max-w-xl w-full h-[600px] flex items-center justify-center  bg-cover bg-no-repeat bg-[url('https://pagedone.io/asset/uploads/1696245837.png')] ">
-                    <div class="">
-                        <div class="lg:w-96 w-auto h-auto bg-white shadow-xl lg:p-6 p-4">
-                            <a href="javascript:;" class="flex items-center mb-6">
-                                <img src="/img/telephone.png" alt="">
-                                <h5 class="text-black text-base font-normal leading-6 ml-5"> {{ $contact->number }}</h5>
-                            </a>
-                            <a href="javascript:;" class="flex items-center mb-6">
-                                <img src="/img/gmail.png" alt="">
-                                <h5 class="text-black text-base font-normal leading-6 ml-5">{{ $contact->email }}</h5>
-                            </a>
-                            <a href="javascript:;" class="flex items-center mb-6">
-                                <img src="/img/location-pin.png" alt="">
-                                <h5 class="text-black text-base font-normal leading-6 ml-5">{{ $contact->address }}</h5>
-                            </a>
-                            <div class="flex items-center justify-center border-t border-gray-100 pt-6">
-                                <a href="https://www.facebook.com/p/Eventas-Crop-Care-Ltd-100094254862757/"
-                                    class="mr-6">
-                                    <svg width="31" height="30" viewBox="0 0 31 30" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="0.0683594" width="30" height="30" rx="15" fill="#337FFF"></rect>
-                                        <path
-                                            d="M18.5094 15.937L18.9369 13.2236H16.3038V11.4599C16.3038 10.7179 16.6714 9.99293 17.8469 9.99293H19.0608V7.68231C18.3539 7.56968 17.6396 7.50874 16.9236 7.5C14.7565 7.5 13.3417 8.80158 13.3417 11.1546V13.2236H10.9395V15.937H13.3417V22.5H16.3038V15.937H18.5094Z"
-                                            fill="white"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
+
+                    <div>
+                        <h3 class="font-semibold">রেজিস্টার্ড অফিস</h3>
+                        <p>৩৯৯, পঞ্চশীল আবাসিক এলাকা,<br>ঢাকা-১২১৭</p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold">ইউরোপিয়ান নম্বর</h3>
+                        <p>+880-1308-479882 (কৃষি বিভাগ সহযোগিতা)<br>+880-1308-479883 (বাণিজ্যিক সহযোগিতা)</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Contact Form -->
+            <div>
+                <h2 class="text-2xl font-bold text-red-500 mb-4">* চিহ্নিত অংশ অবশ্যই পূরণ করতে হবে</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium">নাম (Name) *</label>
+                        <input type="text" id="name" name="name"
+                            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-red-500"
+                            required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium">ই-মেইল (Email) *</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-red-500"
+                            required>
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium">ফোন/মোবাইল (Phone/Mobile) *</label>
+                        <input type="tel" id="phone" name="phone"
+                            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-red-500"
+                            required>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium">বিষয় (Subject) *</label>
+                        <input type="text" id="subject" name="subject"
+                            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-red-500"
+                            required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium">বার্তা (Message)</label>
+                        <textarea id="message" name="message" rows="4"
+                            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-red-500"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 focus:outline-none">পাঠান</button>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
 
     @include('partials.footer')
 </body>
