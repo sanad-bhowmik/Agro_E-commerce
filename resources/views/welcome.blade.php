@@ -104,7 +104,7 @@
             আমাদের লক্ষ্য আধুনিক ও মানসম্পন্ন পরিবেশবান্ধব পণ্য সরবারহের মাধ্যমে কৃষক ভাইদের আশানুরূপ ফলন নিশ্চিত করা।
         </p>
         <div class="mt-6">
-            <a href="#"
+            <a href="/about"
                 class="px-6 py-2 border border-red-600 text-black font-semibold rounded-lg hover:bg-red-600 hover:text-white transition">
                 সম্পূর্ণ পড়ুন
             </a>
@@ -112,7 +112,7 @@
     </section>
     @include('partials.cards')
 
-    <section class="relative bg-[#474747] text-white text-center py-20 px-4">
+    <section class="relative bg-[#474747] text-white text-center py-20 px-4 mt-10">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-2xl md:text-3xl  mb-4">কল্যাণে অঙ্গীকারবদ্ধ</h2>
             <p class="text-sm md:text-lg" id="kollan">
@@ -153,13 +153,14 @@
                         জলবায়ু পরিবর্তনের ফলে, বৃষ্টিপাতের বিচ্যুতি আমন উৎপাদনকে প্রভাবিত করছে। কৃষকদের জন্য নতুন
                         পরিকল্পনার প্রয়োজন...
                     </p>
-                    <a href="#" class="text-red-500 text-sm mt-2 inline-block">সম্পূর্ণ সংবাদ...</a>
+                    <a href="/info" class="text-red-500 text-sm mt-2 inline-block">সম্পূর্ণ সংবাদ...</a>
                 </div>
             </div>
 
             <!-- Card 2 -->
             <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="https://media.prothomalo.com/prothomalo-bangla/2024-11-25/gdz7ow2v/MYMENSINGHDH169420241124WHATSAPP-IMAGE-2024-11-24-AT-6.14.26-PM.JPG.JPG?w=1200&h=675&auto=format%2Ccompress&fit=max" alt="সেমিনার" class="w-full h-48 object-cover">
+                <img src="https://media.prothomalo.com/prothomalo-bangla/2024-11-25/gdz7ow2v/MYMENSINGHDH169420241124WHATSAPP-IMAGE-2024-11-24-AT-6.14.26-PM.JPG.JPG?w=1200&h=675&auto=format%2Ccompress&fit=max"
+                    alt="সেমিনার" class="w-full h-48 object-cover">
                 <div class="p-4">
                     <h3 class="text-xl font-semibold mb-2" style="line-height: 32px;">
                         ইভেন্টাস এবং বাংলাদেশ কৃষি গবেষণা ইনস্টিটিউট-এর মধ্যে সমঝোতা স্মারক স্বাক্ষর
@@ -167,13 +168,14 @@
                     <p class="text-gray-600 text-sm">
                         তৈরি সার হলো মাটির প্রাণ। মাটির স্বাস্থ্য ভালো রাখতে তৈরি সারই প্রধান বিকল্প...
                     </p>
-                    <a href="#" class="text-red-500 text-sm mt-2 inline-block">সম্পূর্ণ সংবাদ...</a>
+                    <a href="/info" class="text-red-500 text-sm mt-2 inline-block">সম্পূর্ণ সংবাদ...</a>
                 </div>
             </div>
 
             <!-- Card 3 -->
             <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/W%26Asunflower.jpg" alt="সূর্যমুখী ফুল" class="w-full h-48 object-cover">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/W%26Asunflower.jpg" alt="সূর্যমুখী ফুল"
+                    class="w-full h-48 object-cover">
                 <div class="p-4">
                     <h3 class="text-xl font-semibold mb-2" style="line-height: 32px;">
                         ভোজ্য তেলের চাহিদা পূরণে সম্ভাবনাময় সূর্যমুখী-এর উৎপাদন কৌশল
@@ -182,16 +184,18 @@
                         সূর্যমুখী একবর্ষী ফসল যার চাহিদা দিনে দিনে বাড়ছে। গবেষণার মাধ্যমে উৎপাদনশীলতা বাড়ানোর চেষ্টা
                         চলছে...
                     </p>
-                    <a href="#" class="text-red-500 text-sm mt-2 inline-block">সম্পূর্ণ সংবাদ...</a>
+                    <a href="/info" class="text-red-500 text-sm mt-2 inline-block">সম্পূর্ণ সংবাদ...</a>
                 </div>
             </div>
         </div>
 
         <!-- Read More Button -->
         <div class="text-center mt-6">
-            <button class="px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
-                আরো পড়ুন...
-            </button>
+            <a href="/info">
+                <button class="px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
+                    আরো পড়ুন...
+                </button>
+            </a>
         </div>
     </section>
     @include('partials.footer')

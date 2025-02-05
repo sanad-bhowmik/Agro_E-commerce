@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/css/app.css')
-    <title>ইভেন্টাস | Contact</title>
+    <title>ইভেন্টাস | যোগাযোগ</title>
     <link rel="icon" type="image/x-icon"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQdSPKEv1mNQUcChuwUqcjgm--Wh0XmEwqQ&s">
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -52,25 +52,23 @@
     <div class="container mx-auto p-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-lg p-6">
             <!-- Contact Information -->
-            <div>
+            <div style="line-height: 32px;font-size: 19px;">
                 <h2 class="text-2xl font-bold text-red-500 mb-4">যোগাযোগ করুন</h2>
                 <div class="text-sm space-y-4">
                     <div>
                         <h3 class="font-semibold">কর্মধারী অফিস</h3>
-                        <p>স্ট্রীট নাম্বার<br>১০৬-১১৬, পথ অ্যালেক্স, ঢাকা-১২১৭<br>বাংলাদেশ</p>
-                        <p>Email: <a href="mailto:info@infaltd.com.bd" class="text-blue-500">info@infaltd.com.bd</a></p>
-                        <p>Phone: +880-2-222295218, +880-2-8319469</p>
+                        <p>1/B, 1/29, Mridha Complex, kalwalapara, mirpur-1</p>
+                        <p>Email: <a href="mailto:info@eccl.com.bd" class="text-blue-500">info@eccl.com.bd</a></p>
+                        <p>Phone: +88 01719-867171</p>
                     </div>
 
                     <div>
-                        <h3 class="font-semibold">রেজিস্টার্ড অফিস</h3>
-                        <p>৩৯৯, পঞ্চশীল আবাসিক এলাকা,<br>ঢাকা-১২১৭</p>
+                        <a href="https://www.facebook.com/p/Eventas-Crop-Care-Ltd-100094254862757/" target="_blank">
+                            <i class="fab fa-facebook-square text-blue-600 text-2xl"></i>
+                        </a>
                     </div>
+                    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-                    <div>
-                        <h3 class="font-semibold">ইউরোপিয়ান নম্বর</h3>
-                        <p>+880-1308-479882 (কৃষি বিভাগ সহযোগিতা)<br>+880-1308-479883 (বাণিজ্যিক সহযোগিতা)</p>
-                    </div>
                 </div>
             </div>
 
@@ -85,20 +83,8 @@
                             required>
                     </div>
                     <div>
-                        <label for="email" class="block text-sm font-medium">ই-মেইল (Email) *</label>
-                        <input type="email" id="email" name="email"
-                            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-red-500"
-                            required>
-                    </div>
-                    <div>
                         <label for="phone" class="block text-sm font-medium">ফোন/মোবাইল (Phone/Mobile) *</label>
                         <input type="tel" id="phone" name="phone"
-                            class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-red-500"
-                            required>
-                    </div>
-                    <div>
-                        <label for="subject" class="block text-sm font-medium">বিষয় (Subject) *</label>
-                        <input type="text" id="subject" name="subject"
                             class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring focus:ring-red-500"
                             required>
                     </div>

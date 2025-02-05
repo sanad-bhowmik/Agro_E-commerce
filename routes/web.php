@@ -26,12 +26,27 @@ Route::get('/mission', function () {
 Route::get('/about', function () {
     return view('components.about');
 });
+Route::get('/info', function () {
+    return view('components.info');
+});
 Route::get('/product', [ProductController::class, 'index2'])->name('product.index2');
 Route::get('/kitnasok', [ProductController::class, 'kitnasok'])->name('product.kitnasok');
 Route::get('/cropProtection', [ProductController::class, 'cropProtection'])->name('product.cropProtection');
 
 // Product Details
 Route::get('/furnace', [ProductController::class, 'furnace'])->name('product.furnace');
+Route::get('/flyShoot', [ProductController::class, 'flyShoot'])->name('product.flyShoot');
+Route::get('/sapnid', [ProductController::class, 'sapnid'])->name('product.sapnid');
+Route::get('/evastop', [ProductController::class, 'evastop'])->name('product.evastop');
+Route::get('/gaGold', [ProductController::class, 'gaGold'])->name('product.gaGold');
+Route::get('/navaPgr', [ProductController::class, 'navaPgr'])->name('product.navaPgr');
+Route::get('/navaRoot', [ProductController::class, 'navaRoot'])->name('product.navaRoot');
+Route::get('/paclu', [ProductController::class, 'paclu'])->name('product.paclu');
+Route::get('/rival', [ProductController::class, 'rival'])->name('product.rival');
+Route::get('/soilBoronPlus', [ProductController::class, 'soilBoronPlus'])->name('product.soilBoronPlus');
+Route::get('/soilBoron15', [ProductController::class, 'soilBoron15'])->name('product.soilBoron15');
+Route::get('/soilMag', [ProductController::class, 'soilMag'])->name('product.soilMag');
+Route::get('/topsin', [ProductController::class, 'topsin'])->name('product.topsin');
 
 // Product Details
 

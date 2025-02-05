@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/css/app.css')
-    <title>ইভেন্টাস | ফার্নেস 95 এসপি</title>
+    <title>ইভেন্টাস | SOIL BORON PLUS</title>
     <link rel="icon" type="image/x-icon"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQdSPKEv1mNQUcChuwUqcjgm--Wh0XmEwqQ&s">
     <!-- Fonts -->
@@ -49,7 +49,6 @@
 
                             .thumbnail {
                                 width: 80px;
-                                /* Small preview size */
                                 height: auto;
                                 border: 2px solid #ddd;
                                 border-radius: 5px;
@@ -64,31 +63,39 @@
                         </style>
 
                         <div class="zoom-container">
-                            <img id="mainImage" src="./img/product2.png" alt="Radi 20 Drip" class="zoom-image">
+                            <img id="mainImage" src="./img/product11.png" alt="SOIL BORON PLUS" class="zoom-image">
                         </div>
 
                         <div class="flex-1">
-                            <h1 class="text-2xl text-red-400">ফার্নেস 95 এসপি</h1>
-                            <p class="text-gray-500 mt-2"> <span class="text-red-400">⦿</span> বিশ্বস্ততার প্রতিশ্রুতি
-                                ১০০%</p>
+                            <h1 class="text-2xl text-red-400">SOIL BORON PLUS (Solubor Boron Fertilizer)</h1>
+                            <p class="text-gray-500 mt-2"> <span class="text-red-400">⦿</span> Boron-20%</p>
                         </div>
                     </div>
 
-                    <!-- Small Thumbnail Below -->
+                    <!-- Small Thumbnails -->
                     <div class="flex mt-4">
-                        <img id="thumbnail" src="./img/product2.png" alt="Radi 20 Drip Thumbnail" class="thumbnail">
+                        <img src="./img/product11.png" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(this)">
+                        <img src="./img/product13.png" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
                     </div>
                 </div>
+
+                <script>
+                    function changeImage(thumbnail) {
+                        document.getElementById("mainImage").src = thumbnail.src;
+                    }
+                </script>
+
                 <div class="w-full max-w-3xl bg-white shadow-md rounded-lg p-6">
                     <!-- Tab Buttons -->
-                    <div class="flex overflow-x-auto border-b scrollbar-hide">
+                    <div class="flex overflow-x-auto border-b border-red-500 scrollbar-hide">
                         <button
                             class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500 active-tab"
                             data-tab="tab1">পরিচিতি</button>
                         <button
                             class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500"
                             data-tab="tab2">উপাদান</button>
-                        <button class="tab-link px-4 py-2 text-red-600 border-b-2 border-red-500 font-bold"
+                        <button
+                            class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500"
                             data-tab="tab3">প্রয়োগক্ষেত্র</button>
                         <button
                             class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500"
@@ -103,12 +110,34 @@
 
                     <!-- Tab Content -->
                     <div class="mt-4">
-                        <div id="tab1" class="tab-content "></div>
-                        <div id="tab2" class="tab-content "></div>
-                        <div id="tab3" class="tab-content"></div>
-                        <div id="tab4" class="tab-content "></div>
-                        <div id="tab5" class="tab-content "></div>
-                        <div id="tab6" class="tab-content "></div>
+                        <div id="tab1" class="tab-content ">SOIL BORON PLUS উদ্ভিদের সুষম
+                            বৃদ্ধির জন্য গুরুত্বপূর্ণ একটি সার, যা ২০% বোরন সরবরাহ করে এবং ফুল ও ফলের গুণগত মান উন্নত
+                            করে।
+                        </div>
+                        <div id="tab2" class="tab-content ">বোরন ২০%
+                        </div>
+                        <div id="tab3" class="tab-content">বোরনের অভাবজনিত ঘাটতি পুরণ করে সয়েল বোরন প্লাস ফসলের সুষম
+                            বর্ধন ও অধিক ফলন নিশ্চিত করে। এটি ধান, গম, ভূট্টা, আলু, শাক-সবজি, তৈলবীজ ও ডালজাতীয় ফসলে
+                            কার্যকরী ।
+                        </div>
+                        <div id="tab4" class="tab-content ">
+                            1. গাছের নতুন গজানো পাতা ফ্যাকাসে দেখায়, কুঁকড়ে যায়, জটা ধরে ও গাছ আকারে খাটো হয়।
+                            <br>
+                            2. কচি কান্ডের বৃদ্ধি ব্যাহত হয় এবং গাছের নতুন গজানো কুশি এবং ডগা মারা যায়।
+                            <br>
+                            3. শিকড়ের স্বাভাবিক বৃদ্ধি ব্যাহত হয়।
+                            <br>
+                            4. ফলের উপর বিবর্ণ দাগ পড়ে, চামড়া ফেটে যায় এবং আকারে আঁকাবাকা হয় ।
+                        </div>
+                        <div id="tab5" class="tab-content ">
+                            শেষ চাষের পূর্বে মাটিতে অনুমোদিত মাত্রায় সয়েল বোরন প্লাস প্রয়োগ করুন । গাছের শারীরিক
+                            বৃদ্ধির সময় বোরনের অভাবজনিত লক্ষণ দেখা দিলে উপরি প্রয়োগ হিসাবে প্রতি লিটার পানিতে
+                            ১.৫ গ্রাম সয়েল বোরন প্লীস মিশিয়ে ভালভাবে স্প্রে করুন।
+                        </div>
+                        <div id="tab6" class="tab-content ">রাইভাল (পটাশিয়াম সালফেট) ব্যবহারের আগে মাটির উর্বরতা
+                            একর প্রতি ১ কেজি । তবে জমির উর্বরতা ও জমিতে বোরনের অভাবের তারতম্যভেদে সয়েল
+                            বোরন প্লাস এর মাত্রা কম বেশী হতে পারে ।
+                        </div>
                     </div>
                 </div>
 
@@ -168,18 +197,23 @@
         const tabs = document.querySelectorAll(".tab-link");
         const contents = document.querySelectorAll(".tab-content");
 
+        // Set the first tab as active by default
+        tabs[0].classList.add("text-red-600", "border-b-2", "border-red-500", "font-bold");
+        contents[0].classList.add("active");
+
         tabs.forEach(tab => {
             tab.addEventListener("click", function () {
+                // Remove active class from all tabs and contents
                 tabs.forEach(t => t.classList.remove("text-red-600", "border-b-2", "border-red-500", "font-bold"));
-                this.classList.add("text-red-600", "border-b-2", "border-red-500", "font-bold");
-
-                const target = this.getAttribute("data-tab");
-
                 contents.forEach(content => content.classList.remove("active"));
-                document.getElementById(target).classList.add("active");
+
+                // Activate the clicked tab and its content
+                this.classList.add("text-red-600", "border-b-2", "border-red-500", "font-bold");
+                document.getElementById(this.getAttribute("data-tab")).classList.add("active");
             });
         });
     });
+
     document.getElementById('thumbnail').addEventListener('click', function () {
         document.getElementById('mainImage').src = this.src;
     });

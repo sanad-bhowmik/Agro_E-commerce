@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/css/app.css')
-    <title>ইভেন্টাস | ফার্নেস 95 এসপি</title>
+    <title>ইভেন্টাস | SOIL BORON-15</title>
     <link rel="icon" type="image/x-icon"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQdSPKEv1mNQUcChuwUqcjgm--Wh0XmEwqQ&s">
     <!-- Fonts -->
@@ -64,31 +64,31 @@
                         </style>
 
                         <div class="zoom-container">
-                            <img id="mainImage" src="./img/product2.png" alt="Radi 20 Drip" class="zoom-image">
+                            <img id="mainImage" src="./img/product12.png" alt="Radi 20 Drip" class="zoom-image">
                         </div>
 
                         <div class="flex-1">
-                            <h1 class="text-2xl text-red-400">ফার্নেস 95 এসপি</h1>
-                            <p class="text-gray-500 mt-2"> <span class="text-red-400">⦿</span> বিশ্বস্ততার প্রতিশ্রুতি
-                                ১০০%</p>
+                            <h1 class="text-2xl text-red-400">SOIL BORON-15 (Disodium Tetraborate Pentahydrate)</h1>
+                            <p class="text-gray-500 mt-2"> <span class="text-red-400">⦿</span>Boron-15%</p>
                         </div>
                     </div>
 
                     <!-- Small Thumbnail Below -->
                     <div class="flex mt-4">
-                        <img id="thumbnail" src="./img/product2.png" alt="Radi 20 Drip Thumbnail" class="thumbnail">
+                        <img id="thumbnail" src="./img/product12.png" alt="Radi 20 Drip Thumbnail" class="thumbnail">
                     </div>
                 </div>
                 <div class="w-full max-w-3xl bg-white shadow-md rounded-lg p-6">
                     <!-- Tab Buttons -->
-                    <div class="flex overflow-x-auto border-b scrollbar-hide">
+                    <div class="flex overflow-x-auto border-b border-red-500 scrollbar-hide">
                         <button
                             class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500 active-tab"
                             data-tab="tab1">পরিচিতি</button>
                         <button
                             class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500"
                             data-tab="tab2">উপাদান</button>
-                        <button class="tab-link px-4 py-2 text-red-600 border-b-2 border-red-500 font-bold"
+                        <button
+                            class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500"
                             data-tab="tab3">প্রয়োগক্ষেত্র</button>
                         <button
                             class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500"
@@ -103,12 +103,41 @@
 
                     <!-- Tab Content -->
                     <div class="mt-4">
-                        <div id="tab1" class="tab-content "></div>
-                        <div id="tab2" class="tab-content "></div>
-                        <div id="tab3" class="tab-content"></div>
-                        <div id="tab4" class="tab-content "></div>
-                        <div id="tab5" class="tab-content "></div>
-                        <div id="tab6" class="tab-content "></div>
+                        <div id="tab1" class="tab-content ">সয়েল বোরন-১৫ ধান ও শাক-সবজিসহ বিভিন্ন ফসলের জন্য অতি উন্নত
+                            মানসম্পন্ন বোরন সার
+                        </div>
+                        <div id="tab2" class="tab-content ">বোরন (B) ১৫%
+                        </div>
+                        <div id="tab3" class="tab-content">ফসল বা উদ্ভিদের জন্য ১৬ টি অত্যাবশ্যক পুষ্টি উপাদানের মধ্যে
+                            বোরন (B) একটি অন্যতম পুষ্টি
+                            উপাদান; যার অভাবে উদ্ভিদ তার বৃদ্ধি, বিকাশ ও জীবনচক্রু সম্পূর্ণ করতে পারে না। একই জমিতে
+                            প্রতি বছর
+                            একাধিক ফসল চাষ করার ফলে বর্তমানে প্রায় সব ধরনের মাটিতেই বোরনের অভাব দেখা যায়। বোরন সারের
+                            অভাবে গাছের পাতা সাদা হয়, পাতা কুঁকড়ে যায়, ছোট হয় ও গাছে বন্ধ্যাত্ব রোগ সৃষ্টি হয়। কখনও
+                            কখনও
+                            পাতার বৌটা ও কান্ড ফেটে যায় এবং গাছের বাড়ন্ত অংশ মারা যায়। ফলে গাছের স্বাভাবিক বৃদ্ধি
+                            বাধাপ্রাপ্ত হয়।
+                        </div>
+                        <div id="tab4" class="tab-content ">
+                            সয়েল বোরন-১৫ ধান, গম, ভূট্টা, আলু, তরমুজ, আনারস, পান, কলা, পেপে, পেয়াজ, রসুন, বিভিন্ন
+                            শাক-সবজি, ডাল ও তেল জাতীয় ফসলে বোরনের অভাব পূরণের জন্য একটি উৎকৃষ্ট সার । সয়েল বোরন-১৫
+                            ব্যবহারে গাছের পাতা সবুজ ও সতেজ হয় । দানাদার ফসলের দানা ও বীজ পুষ্ট হয়। শিকড়ের বৃদ্ধি ভাল
+                            হয়
+                            হরমোনের কার্যকারিতা বৃদ্ধি পায়। উদ্ভিদের বন্ধ্যাতু রোধ করে। ক্যালসিয়াম, ফসফরাস ও
+                            নাইট্রোজেন গ্রহণে
+                            সহায়তা করে। ফলশ্রুতিতে ফসলের গুণগতমান ভাল হয় এবং ফলন বৃদ্ধি পায়।
+
+                        </div>
+                        <div id="tab5" class="tab-content ">
+                            ধান, গম, ভূট্টা, আলু পেঁয়াজ, রসুন, সরিষা ও সব রকমের শাক-সবজি বা অন্যান্য ফসলে
+                            জমি তৈরির শেষ চাষের সময় বিঘা প্রতি (৩৩ শতক) ৮০০ গ্রাম থেকে ১ কেজি সয়েল বোরন-১৫ ব্যবহার
+                            করতে হবে । তবে জমির উর্বরতার তারতম্য ভেদে প্রয়োগ মাত্রা কম বেশি হতে পারে।
+                            বিষক্রিয়া: সয়েল বোরন-১৫ একটি অতি উন্নত মানের পরিবেশ বান্ধব বোরন সার । এর স্বাভাবিক
+                            ব্যবহারে
+                            পরিবেশের উপর কোন বিরূপ প্রতিক্রিয়া নেই ।
+                        </div>
+                        <div id="tab6" class="tab-content ">
+                        </div>
                     </div>
                 </div>
 
@@ -168,18 +197,23 @@
         const tabs = document.querySelectorAll(".tab-link");
         const contents = document.querySelectorAll(".tab-content");
 
+        // Set the first tab as active by default
+        tabs[0].classList.add("text-red-600", "border-b-2", "border-red-500", "font-bold");
+        contents[0].classList.add("active");
+
         tabs.forEach(tab => {
             tab.addEventListener("click", function () {
+                // Remove active class from all tabs and contents
                 tabs.forEach(t => t.classList.remove("text-red-600", "border-b-2", "border-red-500", "font-bold"));
-                this.classList.add("text-red-600", "border-b-2", "border-red-500", "font-bold");
-
-                const target = this.getAttribute("data-tab");
-
                 contents.forEach(content => content.classList.remove("active"));
-                document.getElementById(target).classList.add("active");
+
+                // Activate the clicked tab and its content
+                this.classList.add("text-red-600", "border-b-2", "border-red-500", "font-bold");
+                document.getElementById(this.getAttribute("data-tab")).classList.add("active");
             });
         });
     });
+
     document.getElementById('thumbnail').addEventListener('click', function () {
         document.getElementById('mainImage').src = this.src;
     });

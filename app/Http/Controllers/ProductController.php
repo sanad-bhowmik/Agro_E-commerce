@@ -120,5 +120,65 @@ class ProductController extends Controller
 
         return view('components.productDetails.furnace');
     }
+    public function flyShoot()
+    {
+
+        return view('components.productDetails.flyShoot');
+    }
+    public function sapnid()
+    {
+
+        return view('components.productDetails.sapnid');
+    }
+    public function evastop()
+    {
+
+        return view('components.productDetails.evastop');
+    }
+    public function gaGold()
+    {
+
+        return view('components.productDetails.gaGold');
+    }
+    public function navaPgr()
+    {
+
+        return view('components.productDetails.navaPgr');
+    }
+    public function navaRoot()
+    {
+
+        return view('components.productDetails.navaRoot');
+    }
+    public function paclu()
+    {
+
+        return view('components.productDetails.paclu');
+    }
+    public function rival()
+    {
+
+        return view('components.productDetails.rival');
+    }
+    public function soilBoronPlus()
+    {
+
+        return view('components.productDetails.soilBoronPlus');
+    }
+    public function soilBoron15()
+    {
+
+        return view('components.productDetails.soilBoron15');
+    }
+    public function soilMag()
+    {
+
+        return view('components.productDetails.soilMag');
+    }
+    public function topsin()
+    {
+
+        return view('components.productDetails.topsin');
+    }
     // Product Details
 }

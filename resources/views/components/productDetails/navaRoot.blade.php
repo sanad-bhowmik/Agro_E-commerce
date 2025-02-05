@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/css/app.css')
-    <title>ইভেন্টাস | ফার্নেস 95 এসপি</title>
+    <title>ইভেন্টাস | NAVA ROOT</title>
     <link rel="icon" type="image/x-icon"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQdSPKEv1mNQUcChuwUqcjgm--Wh0XmEwqQ&s">
     <!-- Fonts -->
@@ -64,31 +64,32 @@
                         </style>
 
                         <div class="zoom-container">
-                            <img id="mainImage" src="./img/product2.png" alt="Radi 20 Drip" class="zoom-image">
+                            <img id="mainImage" src="./img/product7.png" alt="Radi 20 Drip" class="zoom-image">
                         </div>
 
                         <div class="flex-1">
-                            <h1 class="text-2xl text-red-400">ফার্নেস 95 এসপি</h1>
-                            <p class="text-gray-500 mt-2"> <span class="text-red-400">⦿</span> বিশ্বস্ততার প্রতিশ্রুতি
-                                ১০০%</p>
+                            <h1 class="text-2xl text-red-400">NAVA ROOT</h1>
+                            <p class="text-gray-500 mt-2"> <span class="text-red-400">⦿</span>NAA(Naphthoic Acetic
+                                Acid-98%)</p>
                         </div>
                     </div>
 
                     <!-- Small Thumbnail Below -->
                     <div class="flex mt-4">
-                        <img id="thumbnail" src="./img/product2.png" alt="Radi 20 Drip Thumbnail" class="thumbnail">
+                        <img id="thumbnail" src="./img/product7.png" alt="Radi 20 Drip Thumbnail" class="thumbnail">
                     </div>
                 </div>
                 <div class="w-full max-w-3xl bg-white shadow-md rounded-lg p-6">
                     <!-- Tab Buttons -->
-                    <div class="flex overflow-x-auto border-b scrollbar-hide">
+                    <div class="flex overflow-x-auto border-b border-red-500 scrollbar-hide">
                         <button
                             class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500 active-tab"
                             data-tab="tab1">পরিচিতি</button>
                         <button
                             class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500"
                             data-tab="tab2">উপাদান</button>
-                        <button class="tab-link px-4 py-2 text-red-600 border-b-2 border-red-500 font-bold"
+                        <button
+                            class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500"
                             data-tab="tab3">প্রয়োগক্ষেত্র</button>
                         <button
                             class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500"
@@ -103,11 +104,56 @@
 
                     <!-- Tab Content -->
                     <div class="mt-4">
-                        <div id="tab1" class="tab-content "></div>
-                        <div id="tab2" class="tab-content "></div>
-                        <div id="tab3" class="tab-content"></div>
-                        <div id="tab4" class="tab-content "></div>
-                        <div id="tab5" class="tab-content "></div>
+                        <div id="tab1" class="tab-content ">NAVA ROOT হল NAA (Naphthoic Acetic Acid-98%) সমৃদ্ধ
+                            একটি উদ্ভিদ বৃদ্ধিবর্ধক যা শিকড় ও ফলনের উন্নতি সাধন করে।
+                        </div>
+                        <div id="tab2" class="tab-content ">NAA (Naphthoic Acetic Acid - 98%) – এটি একটি শক্তিশালী
+                            উদ্ভিদ বৃদ্ধিবর্ধক হরমোন, যা মূল গঠনে সহায়তা করে এবং উদ্ভিদের বৃদ্ধি ও ফলন বৃদ্ধি করে।
+                        </div>
+                        <div id="tab3" class="tab-content">মূলত উদ্ভিদের শিকড় গঠনে সহায়তা করে, চারা প্রতিস্থাপন, ফলন
+                            বৃদ্ধির জন্য এবং পাতা ঝরা রোধে ব্যবহৃত হয়।
+                        </div>
+                        <div id="tab4" class="tab-content ">
+                            ১। নাভা রুট জমি তৈরির সময় শেষ চাষের আগে ছিটিয়ে
+                            দিয়ে বীজ বপন বা চারা রোপন করলে বীজের অংকুরোদরগম
+                            ও শিকড়ের বৃদ্ধি তৃরাস্বিত হয়। প্রতিটি জীবিত বীজ থেকে ব্যবহার বিধি :
+                            সুস্থ, সবল বলিষ্ঠ চারা দ্রুত গজায়, তাই ফলন বাড়ে । শেষ চাষের সময় অন্যান্য সারের সঙ্গে নাভা
+                            রুট মিশিয়ে
+                            <br>
+                            ২। নাভা রুট ব্যবহারে চারাগুলো শুরুতেই খুব শক্তিশালী হয়ে নিম্নলিখিত মন্ত্রায় প্রয়োগ করতে
+                            হবে তবে ফল গাছের
+                            গজায় এবং শিকড়ের সংখ্যা স্বাভাবিক অপেক্ষা অনেকগুলো ক্ষেত্রে অন্যান্য সারের সঙ্গে নাভা রুট
+                            মিশিয়ে গাছের গোড়ায়
+                            বেশি ও দীর্ঘ হয় ফলে ফসল মাটি থেকে অধিক খাদ্য গ্রহন বা গর্তে প্রয়োগ করতে হবে । উল্লেখ্য
+                            যে, নাভা রুট কোন
+                            করতে পারে, তাই ফলন বৃদ্ধি পায়। অবস্থাতেই স্প্রে করা উচিত নয়।
+                            <br>
+                            ৩। নাভা রুট ব্যবহারে বীজের উষ্ণতা বৃদ্ধি করে সুপ্ততা ভেঙ্গে
+                            ফেলে ৷ ফলে মাটিতে ঠান্ডা আবহাওয়াতেও শীতকালে যে ফসলের নাম য় টমেটো ।
+                            সকল বীজ গজাতে অনেক সময় লাগে এঁ সকল বীজ থেকেও
+                            চারা অল্প সময়ে বেরিয়ে আসতে সাহয্য করে প্রয়োগমাত্রা বিঘা প্রতি ১ কেজি
+                            <br>
+                            ৪ । নাভা রুট ব্যবহারে রূপান্তরিত কান্ড যেমন, টমেটো কোষ
+                            বিভাজন তৃরান্বিত করে। ফলে এ সকল ফসলের ফলন
+                            অনেকাংশে বৃদ্ধি পায় ।
+                            <br>
+                            ৫। নাভা রুট এ আছে বিশ্বস্বীকৃত রুট হরমোন এনএএ, ফলে প্রতিকূল কৃষিজ পরিবেশ (অতি শীত বা অতি
+                            খরা) গাছের খাদ্য গ্রহনের উপযোগী শিকড় বিস্তারে সাহায্য
+                            করে তাই সহজে গাছ মরে না।
+                            <br>
+                            ৬। নাভা রুট ব্যবহারে ফসল/গাছ দৃঢ়ভাবে বেড়ে উঠে । ফলে
+                            ঝড় বৃষ্টিতে সহজেই গাছ হেলে বা ভেঙ্গে পড়ে না।
+                            <br>
+                            ৭। নাভা রুট ফসলের আগাম পরিপকৃতা আনতে সহায়তা
+                            করে।
+                        </div>
+                        <div id="tab5" class="tab-content ">
+                            শেষ চাষের সময় অন্যান্য সারের সঙ্গে নাভা রুট মিশিয়ে
+                            নিম্নলিখিত মন্রায় প্রয়োগ করতে হবে । তবে ফল গাছের
+                            ক্ষেত্রে অন্যান্য সারের সঙ্গে নাভা রুট মিশিয়ে গাছের গোড়ায়
+                            বা গর্তে প্রয়োগ করতে হবে ৷ উল্লেখ্য যে, নাভা রুট কোন
+                            অবস্থাতেই স্প্রে করা উচিত নয়।
+                        </div>
                         <div id="tab6" class="tab-content "></div>
                     </div>
                 </div>
@@ -168,18 +214,23 @@
         const tabs = document.querySelectorAll(".tab-link");
         const contents = document.querySelectorAll(".tab-content");
 
+        // Set the first tab as active by default
+        tabs[0].classList.add("text-red-600", "border-b-2", "border-red-500", "font-bold");
+        contents[0].classList.add("active");
+
         tabs.forEach(tab => {
             tab.addEventListener("click", function () {
+                // Remove active class from all tabs and contents
                 tabs.forEach(t => t.classList.remove("text-red-600", "border-b-2", "border-red-500", "font-bold"));
-                this.classList.add("text-red-600", "border-b-2", "border-red-500", "font-bold");
-
-                const target = this.getAttribute("data-tab");
-
                 contents.forEach(content => content.classList.remove("active"));
-                document.getElementById(target).classList.add("active");
+
+                // Activate the clicked tab and its content
+                this.classList.add("text-red-600", "border-b-2", "border-red-500", "font-bold");
+                document.getElementById(this.getAttribute("data-tab")).classList.add("active");
             });
         });
     });
+
     document.getElementById('thumbnail').addEventListener('click', function () {
         document.getElementById('mainImage').src = this.src;
     });

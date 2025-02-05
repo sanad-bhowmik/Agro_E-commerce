@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Sliding Carousel</title>
+    <title>Responsive Auto Sliding Carousel</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script>
         var cont = 0;
@@ -25,7 +25,7 @@
                     $("#sButton1").addClass("bg-purple-800");
                     cont = 0;
                 }
-            }, 5000); // Change slides every 5 seconds
+            }, 5000);
         }
 
         function reinitLoop() {
@@ -64,22 +64,29 @@
 </head>
 
 <body class="bg-gray-100">
-    <div class="sliderAx w-full">
+    <div class="sliderAx w-full relative">
         <!-- Slide 1 -->
         <div id="slider-1" class="w-full">
-            <div class="bg-cover bg-center h-[500px] text-white flex items-center justify-center"
+            <div class="bg-cover bg-center h-[300px] md:h-[500px] text-white flex items-center justify-center"
                 style="background-image: url('https://www.ifbagro.in/assets/images/nutrafeed-fish/advanced-formulated-fish-banner2.jpg');">
             </div>
         </div>
 
         <!-- Slide 2 -->
-        <div id="slider-2" class="w-full">
-            <div class="bg-cover bg-center h-[500px] text-white flex items-center justify-center"
+        <div id="slider-2" class="w-full hidden">
+            <div class="bg-cover bg-center h-[300px] md:h-[500px] text-white flex items-center justify-center"
                 style="background-image: url('https://www.ifbagro.in/assets/images/formulated-feed/formulated-feed-banner2.jpg');">
             </div>
         </div>
-    </div>
 
+
+
+        <!-- Pagination Dots -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <button id="sButton1" onclick="sliderButton1()" class="w-3 h-3 bg-white rounded-full"></button>
+            <button id="sButton2" onclick="sliderButton2()" class="w-3 h-3 bg-gray-400 rounded-full"></button>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -37,7 +37,7 @@
                 <div class="container mx-auto">
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         <!-- Card 1 -->
-                        <a href="">
+                        <a href="/evastop">
                             <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                                 <!-- Image container with fixed height -->
                                 <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
@@ -50,7 +50,7 @@
                             </div>
                         </a>
                         <!-- Card 2 -->
-                        <a href="">
+                        <a href="/gaGold">
                             <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                                 <!-- Image container with fixed height -->
                                 <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
@@ -58,13 +58,13 @@
                                         class="w-full h-full object-contain">
                                 </div>
                                 <div class="p-4">
-                                    <h3 class="text-lg font-semibold">GA-Gold</h3>
+                                    <h3 class="text-lg font-semibold">GA GOLD</h3>
                                 </div>
                             </div>
                         </a>
 
                         <!-- Card 3 -->
-                        <a href="">
+                        <a href="/navaPgr">
                             <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                                 <!-- Image container with fixed height -->
                                 <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
@@ -78,7 +78,7 @@
                         </a>
 
                         <!-- Card 4 -->
-                        <a href="">
+                        <a href="/navaPgr">
                             <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                                 <!-- Image container with fixed height -->
                                 <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
@@ -94,7 +94,7 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
                         <!-- Card 1 -->
-                        <a href="">
+                        <a href="/navaRoot">
                             <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                                 <!-- Image container with fixed height -->
                                 <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
@@ -107,7 +107,7 @@
                             </div>
                         </a>
                         <!-- Card 2 -->
-                        <a href="">
+                        <a href="/paclu">
                             <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                                 <!-- Image container with fixed height -->
                                 <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
@@ -121,7 +121,7 @@
                         </a>
 
                         <!-- Card 3 -->
-                        <a href="">
+                        <a href="/rival">
                             <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                                 <!-- Image container with fixed height -->
                                 <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
@@ -135,7 +135,7 @@
                         </a>
 
                         <!-- Card 4 -->
-                        <a href="">
+                        <a href="/soilBoronPlus">
                             <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                                 <!-- Image container with fixed height -->
                                 <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
@@ -151,7 +151,7 @@
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
                         <!-- Card 1 -->
-                        <a href="">
+                        <a href="/soilBoron15">
                             <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                                 <!-- Image container with fixed height -->
                                 <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
@@ -164,7 +164,7 @@
                             </div>
                         </a>
                         <!-- Card 2 -->
-                        <a href="">
+                        <a href="/soilBoronPlus">
                             <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                                 <!-- Image container with fixed height -->
                                 <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
@@ -178,7 +178,7 @@
                         </a>
 
                         <!-- Card 3 -->
-                        <a href="">
+                        <a href="/soilMag">
                             <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                                 <!-- Image container with fixed height -->
                                 <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
@@ -192,7 +192,7 @@
                         </a>
 
                         <!-- Card 4 -->
-                        <a href="">
+                        <a href="/topsin">
                             <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                                 <!-- Image container with fixed height -->
                                 <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
@@ -200,55 +200,25 @@
                                         class="w-full h-full object-contain">
                                 </div>
                                 <div class="p-4">
-                                    <h3 class="text-lg font-semibold">TOPSIN Chelated Plus</h3>
+                                    <h3 class="text-lg font-semibold">TOPSIN</h3>
                                 </div>
                             </div>
                         </a>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-                        <!-- Card 1 -->
-                        <a href="">
+                        <a href="/gaGold">
                             <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
                                 <!-- Image container with fixed height -->
                                 <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
-                                    <img src="./img/product16.png" alt="Product Image"
+                                    <img src="./img/product19.png" alt="Product Image"
                                         class="w-full h-full object-contain">
                                 </div>
                                 <div class="p-4">
-                                    <h3 class="text-lg font-semibold">TOPSIN Chelated</h3>
+                                    <h3 class="text-lg font-semibold">GA GOLD PLUS</h3>
                                 </div>
                             </div>
                         </a>
-                        <!-- Card 2 -->
-                        <a href="">
-                            <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                                <!-- Image container with fixed height -->
-                                <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
-                                    <img src="./img/product17.png" alt="Product Image"
-                                        class="w-full h-full object-contain">
-                                </div>
-                                <div class="p-4">
-                                    <h3 class="text-lg font-semibold">TOPSIN HEPTA</h3>
-                                </div>
-                            </div>
-                        </a>
-
-                        <!-- Card 3 -->
-                        <a href="">
-                            <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
-                                <!-- Image container with fixed height -->
-                                <div class="h-48 overflow-hidden flex items-center justify-center bg-gray-100">
-                                    <img src="./img/product18.png" alt="Product Image"
-                                        class="w-full h-full object-contain">
-                                </div>
-                                <div class="p-4">
-                                    <h3 class="text-lg font-semibold">TOPSIN MONO</h3>
-                                </div>
-                            </div>
-                        </a>
-
-
                     </div>
                 </div>
             </main>

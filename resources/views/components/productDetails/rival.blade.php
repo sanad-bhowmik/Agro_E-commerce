@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/css/app.css')
-    <title>ইভেন্টাস | ফার্নেস 95 এসপি</title>
+    <title>ইভেন্টাস | Rival</title>
     <link rel="icon" type="image/x-icon"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQdSPKEv1mNQUcChuwUqcjgm--Wh0XmEwqQ&s">
     <!-- Fonts -->
@@ -64,31 +64,32 @@
                         </style>
 
                         <div class="zoom-container">
-                            <img id="mainImage" src="./img/product2.png" alt="Radi 20 Drip" class="zoom-image">
+                            <img id="mainImage" src="./img/product9.png" alt="Radi 20 Drip" class="zoom-image">
                         </div>
 
                         <div class="flex-1">
-                            <h1 class="text-2xl text-red-400">ফার্নেস 95 এসপি</h1>
-                            <p class="text-gray-500 mt-2"> <span class="text-red-400">⦿</span> বিশ্বস্ততার প্রতিশ্রুতি
-                                ১০০%</p>
+                            <h1 class="text-2xl text-red-400">Rival (Potassium Sulphate)</h1>
+                            <p class="text-gray-500 mt-2"> <span class="text-red-400">⦿</span>Potassium-50%</p>
+                            <p class="text-gray-500 mt-2"> <span class="text-red-400">⦿</span>Sulphur-17%</p>
                         </div>
                     </div>
 
                     <!-- Small Thumbnail Below -->
                     <div class="flex mt-4">
-                        <img id="thumbnail" src="./img/product2.png" alt="Radi 20 Drip Thumbnail" class="thumbnail">
+                        <img id="thumbnail" src="./img/product9.png" alt="Radi 20 Drip Thumbnail" class="thumbnail">
                     </div>
                 </div>
                 <div class="w-full max-w-3xl bg-white shadow-md rounded-lg p-6">
                     <!-- Tab Buttons -->
-                    <div class="flex overflow-x-auto border-b scrollbar-hide">
+                    <div class="flex overflow-x-auto border-b border-red-500 scrollbar-hide">
                         <button
                             class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500 active-tab"
                             data-tab="tab1">পরিচিতি</button>
                         <button
                             class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500"
                             data-tab="tab2">উপাদান</button>
-                        <button class="tab-link px-4 py-2 text-red-600 border-b-2 border-red-500 font-bold"
+                        <button
+                            class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500"
                             data-tab="tab3">প্রয়োগক্ষেত্র</button>
                         <button
                             class="tab-link px-4 py-2 text-gray-600 border border-transparent hover:text-red-600 hover:border-red-500"
@@ -103,12 +104,29 @@
 
                     <!-- Tab Content -->
                     <div class="mt-4">
-                        <div id="tab1" class="tab-content "></div>
-                        <div id="tab2" class="tab-content "></div>
-                        <div id="tab3" class="tab-content"></div>
-                        <div id="tab4" class="tab-content "></div>
-                        <div id="tab5" class="tab-content "></div>
-                        <div id="tab6" class="tab-content "></div>
+                        <div id="tab1" class="tab-content ">Rival (Potassium Sulphate) একটি উচ্চমানের সার, যার মধ্যে
+                            ৫০% পটাশিয়াম ও ১৭% সালফার রয়েছে, যা ফসলের বৃদ্ধি, ফুল ও ফলের গুণগত মান উন্নত করতে
+                            সহায়ক।
+                        </div>
+                        <div id="tab2" class="tab-content ">⦿ পটাশিয়াম (Potassium) - ৫০% <br>
+                            ⦿ সালফার (Sulphur) - ১৭%
+                        </div>
+                        <div id="tab3" class="tab-content">রাইভাল (পটাশিয়াম সালফেট) বিভিন্ন ফল, সবজি, চা, তামাক ও
+                            অন্যান্য উচ্চমূল্যের ফসলের জন্য উপযুক্ত, যা গাছের বৃদ্ধিতে সহায়তা করে এবং ফলন বৃদ্ধি করে।
+                        </div>
+                        <div id="tab4" class="tab-content ">
+                            রাইভাল (পটাশিয়াম সালফেট) গাছের রোগ প্রতিরোধ ক্ষমতা বাড়ায়, ফল ও শস্যের গুণগত মান উন্নত করে
+                            এবং সুস্বাদু ও মজবুত ফসল উৎপাদনে সহায়তা করে।
+                        </div>
+                        <div id="tab5" class="tab-content ">
+                            রাইভাল (পটাশিয়াম সালফেট) ফসলের ধরণ ও মাটির উর্বরতা অনুযায়ী নির্ধারিত পরিমাণে প্রয়োগ করা
+                            হয়। সাধারণত, এটি বীজতলা প্রস্তুত করার সময় বা বৃদ্ধির পর্যায়ে মাটিতে মিশিয়ে বা সেচের
+                            মাধ্যমে ব্যবহার করা হয়।
+                        </div>
+                        <div id="tab6" class="tab-content ">রাইভাল (পটাশিয়াম সালফেট) ব্যবহারের আগে মাটির উর্বরতা
+                            পরীক্ষা করে নির্ধারিত মাত্রায় প্রয়োগ করুন। অতিরিক্ত ব্যবহার এড়িয়ে চলুন, কারণ এটি
+                            উদ্ভিদের ভারসাম্য নষ্ট করতে পারে। সংরক্ষণকালে শুকনো ও শীতল স্থানে রাখুন এবং শিশুদের নাগালের
+                            বাইরে রাখুন।</div>
                     </div>
                 </div>
 
@@ -168,18 +186,23 @@
         const tabs = document.querySelectorAll(".tab-link");
         const contents = document.querySelectorAll(".tab-content");
 
+        // Set the first tab as active by default
+        tabs[0].classList.add("text-red-600", "border-b-2", "border-red-500", "font-bold");
+        contents[0].classList.add("active");
+
         tabs.forEach(tab => {
             tab.addEventListener("click", function () {
+                // Remove active class from all tabs and contents
                 tabs.forEach(t => t.classList.remove("text-red-600", "border-b-2", "border-red-500", "font-bold"));
-                this.classList.add("text-red-600", "border-b-2", "border-red-500", "font-bold");
-
-                const target = this.getAttribute("data-tab");
-
                 contents.forEach(content => content.classList.remove("active"));
-                document.getElementById(target).classList.add("active");
+
+                // Activate the clicked tab and its content
+                this.classList.add("text-red-600", "border-b-2", "border-red-500", "font-bold");
+                document.getElementById(this.getAttribute("data-tab")).classList.add("active");
             });
         });
     });
+
     document.getElementById('thumbnail').addEventListener('click', function () {
         document.getElementById('mainImage').src = this.src;
     });
